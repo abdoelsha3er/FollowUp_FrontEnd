@@ -1,0 +1,14 @@
+.data
+{
+    font-size: x-large;
+}
+.modal-content{
+    margin-top: 30%;
+}
+.modal-dialog{
+    margin-top: 12%;
+}
+.cardes{
+    width:70%;
+    margin-right: 20%;
+}

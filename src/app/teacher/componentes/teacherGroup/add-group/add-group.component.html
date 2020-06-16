@@ -1,0 +1,180 @@
+<app-teacher-nav></app-teacher-nav>
+<div class="card">
+    <div class="card-head">
+        ADD GROUP
+    </div>
+    <div class="card-body">
+        <form >
+            <div class="form-row">
+
+                <div class="col-md-12 form-group">
+                        <label for="name"> Name</label>
+                        <input type="text" class="form-control" name="name"  placeholder="Enter Name">
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="col-md-12 form-group">
+                        <label for="description">Description</label>
+                        <textarea class="form-control " name="description" rows="4"  cols="50" placeholder="Enter description"></textarea>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="col-md-12 form-group ">
+                    <label for="logo">Logo</label>
+                    <input type="file" class="form-control" name="logo" placeholder="Enter Logo" accept="image/*" >            
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="col-md-12  form-group ">
+                        <label for="grade">Grade</label>
+                        <select name="grade" id="grade" class="form-control">
+                            <option value="Kg1" class="form-control">Kg1</option>
+                            <option value="Kg2" class="form-control">Kg2</option>
+                            <option value="Grade1" class="form-control">Grade 1</option>
+                            <option value="Grade2" class="form-control">Grade 2</option>
+                            <option value="Grade3" class="form-control">Grade 3</option>
+                            <option value="Grade4" class="form-control">Grade 4</option>
+                            <option value="Grade5" class="form-control">Grade 5</option>
+                            <option value="Grade6" class="form-control">Grade 6</option>                
+                        </select>
+                </div>
+            </div> 
+            <div class="form-row">
+                <div class="col-md-6 form-group">
+                        <label for="Subject">Subject</label>
+                        <select name="subiect" id="subject" class="form-control">
+                            <option value="Arabic" class="form-control">Arabic</option>
+                            <option value="Math" class="form-control">Math</option>
+                            <option value="English" class="form-control">English</option>
+                            <option value="Science" class="form-control">Science</option>
+                            <option value="Art" class="form-control">Art</option>      
+                        </select>
+                </div>
+                <div class="col-md-6 ">
+                    <label for="Price in month">Price In Month</label>
+                     <div class="row">
+                        <div class="col-md-8 price">
+                           <input type="text"  class="form-control " name="Price In Month"  placeholder="Enter Price In Month">
+                        </div>
+                        <div class="col-md-4 EGP">
+                          <div >EGP</div>
+                        </div>
+                     </div>
+                </div>
+            </div>
+            <div class="form-row">
+                    <div class="col-md-6 form-group" style="padding: 0px; ">
+                        <div class="row " style="margin-top: 16px;margin-left: 8px;">
+                            <label class="col-md-12" for="date">Date</label>
+                            <div class="col-md-12 form-group">
+                                <div class="row">
+                                    <span style="margin-left: 20px;">From</span><span> : </span>
+                                    <input type="date" id="start" name="date" value="2018-07-22"  class="input--style-3">            
+                                </div>      
+                            </div>
+                            <div class="col-md-12 form-group">
+                                <span style="margin-left: 20px;">To</span> <span> : </span>
+                                <input type="date" id="start" name="date" value="2018-07-22"  class="input--style-3">                
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 form-group" style="margin-top: -115px;">
+                        <label for="grade">Status</label>
+                            <select name="grade" id="grade" class="form-control">
+                                <option value="Opening" class="form-control">Opening</option>
+                                <option value="Closed" class="form-control">Closed</option>
+                                <option value="Archived" class="form-control">Archived</option>                
+                            </select>
+                    </div>
+                <!-- <div class="col-md-6 form-group" style="padding: 0px;">
+                    <label class="col-md-6" for="date">Date</label>
+                    <div class="col-md-6 form-group">
+                        <div class="row">
+                            <span style="margin-left: 20px;">From</span><span> : </span>
+                            <input type="date" id="start" name="date" value="2018-07-22"  class="input--style-3">            
+                        </div>      
+                    </div>
+                    <div class="col-md-6 form-group">
+                        <span style="margin-left: 20px;">To</span> <span> : </span>
+                        <input type="date" id="start" name="date" value="2018-07-22"  class="input--style-3">                
+                    </div>
+                </div>   -->
+            </div>
+    
+            <div class="form-row daytime">
+                <div class="col-md-12 form-group">
+                    <label for="date">Day & Time</label>
+                </div>  
+                <div class="col-md-4 form-group">
+                    <div class="row">
+                        <div class="col-md-2">
+                            Days
+                        </div>
+                        <div class="col-md-7 days">
+                            <div class="row day">
+                                <input type="checkbox" class="form-checkbox" name="Saturday" >
+                                <label > Saturday</label>
+                            </div>
+                            <div class="row day">
+                                <input type="checkbox" class="form-checkbox" name="Sunday" >
+                                <label > Sunday</label>
+                            </div>
+                            <div class="row day">
+                                <input type="checkbox" class="form-checkbox" name="Monday" >
+                                <label > Monday</label>
+                            </div>
+                            <div class="row day">
+                                <input type="checkbox" class="form-checkbox" name="Tuesday" >
+                                <label > Tuesday</label>
+                            </div>
+                            <div class="row day">
+                                <input type="checkbox" class="form-checkbox" name="Wednesday" >
+                                <label > Wednesday</label>
+                            </div>
+                            <div class="row day">
+                                <input type="checkbox" class="form-checkbox" name="Thursday" >
+                                <label > Thursday</label>
+                            </div>
+                            <div class="row day">
+                                <input type="checkbox" class="form-checkbox" name="Friday" >
+                                <label > Friday</label>
+                            </div>
+                        </div>
+                    </div>      
+                </div>
+                <div class="col-md-4 form-group">
+                    <div class="row">
+                        From  <B> : </B>
+                        <input type="text"  class="form-control timefrom " name="timefrom">
+                    </div>      
+                </div>
+                <div class="col-md-4 form-group">
+                    <div class="row">
+                        To  <B> : </B>
+                        <input type="text"  class="form-control timefrom " name="timefrom">
+                    </div>       
+                </div>
+                
+            </div>
+            <div class="form-row">
+                    <button class="btn btn-info col-md-offset-8 save" >Save</button>
+            </div> 
+           
+        </form> 
+    </div>
+  
+</div>
+<br><br><br>
+
+<app-user-footer></app-user-footer>
+<script src="assets/register/vendor/jquery/jquery.min.js"></script>
+    <!-- Vendor JS-->
+   
+    <script src="assets/register/vendor/datepicker/moment.min.js"></script>
+    <script src="assets/register/vendor/datepicker/daterangepicker.js"></script>
+    <script src="assets/register/js/global.js"></script>
+
+    <!-- Main JS-->
+    
+
+

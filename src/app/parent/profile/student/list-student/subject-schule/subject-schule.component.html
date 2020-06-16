@@ -1,0 +1,55 @@
+<table class="flat-table">
+    <tbody>
+      <tr>
+        <th></th>
+        <th>Saturday</th>
+        <th>Sunday</th>
+        <th>Monday</th>
+        <th>Tuesday</th>
+        <th>Wendnesday</th>
+        <th>Thursday</th>
+        <th>Friday</th>
+      </tr>
+      <tr *ngFor="let item of subjects; let y = index">
+        <td style="color:white; background-color: #f7c552;;">{{item.subject}}</td>
+        <td >
+            <span *ngFor="let items of item.Days; let i = index">
+               <span *ngIf='items === "sat" '>{{item.Times[i]}}</span>
+            </span>
+        </td>
+        <td >
+            <span *ngFor="let items of item.Days; let i = index">
+               <span *ngIf='items === "sun" '>{{item.Times[i]}}</span>
+            </span>
+        </td>
+        <td >
+            <span *ngFor="let items of item.Days; let i = index">
+                <span *ngIf='items === "mon" '>{{item.Times[i]}}</span>
+            </span>
+        </td>
+        <td >
+            <span *ngFor="let items of item.Days; let i = index">
+                <span *ngIf='items === "thues" '>{{item.Times[i]}}</span>
+            </span>
+        </td>
+        <td >
+            <span *ngFor="let items of item.Days; let i = index">
+                <span *ngIf='items === "wed" '>{{item.Times[i]}}</span>
+            </span>
+        </td>
+        <td >
+            <span *ngFor="let items of item.Days; let i = index">
+                <span *ngIf='items === "thur" '>{{item.Times[i]}}</span>
+            </span>
+        </td>
+        <td >
+            <span *ngFor="let items of item.Days; let i = index">
+               <span *ngIf='items === "fri" '>{{item.Times[i]}}</span>
+             </span>
+        </td>
+      </tr>
+    
+    </tbody>
+</table>
+
+  

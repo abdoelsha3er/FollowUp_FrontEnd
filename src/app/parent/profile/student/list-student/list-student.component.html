@@ -1,0 +1,72 @@
+   <head>
+
+    <link rel="stylesheet" type="text/css" href="../../../../../assets/tables/vendor/animate/animate.css">
+    <!--===============================================================================================-->
+        <link rel="stylesheet" type="text/css" href="../../../../../assets/tables/vendor/select2/select2.min.css">
+    <!--===============================================================================================-->
+        <link rel="stylesheet" type="text/css" href="../../../../../assets/tables/vendor/perfect-scrollbar/perfect-scrollbar.css">
+    <!--===============================================================================================-->
+        <link rel="stylesheet" type="text/css" href="../../../../../assets/tables/css/util.css">
+        <link rel="stylesheet" type="text/css" href="../../../../../assets/tables/css/main.css">
+    <!--===============================================================================================-->
+
+    <link href="../../../../../assets/popup/css/bootstrap.css" rel="stylesheet" />
+    <link href="../../../../../assets/popup/css/font-awesome.css" rel="stylesheet" />
+    </head>
+
+  <div class="container-table100"style="background:none" >
+    <div class="wrap-table100">
+      <div class="table100 ver1 m-b-10" style="margin-top:3%; width: 75%; padding: 0px; margin-left: 15%;">
+        <div class="table100-body js-pscroll">
+          <table style="margin-top:16px">
+            <!-- <tbody> -->
+              <tr class="row100 body" *ngFor="let item of students ; let i = index ">
+                <!-- <td >{{item.id}}</td> -->
+                <td class="cell10 column1">
+                  <img src="../../../../../assets/img/student1.jpg" style="width: 50px; height: 50px; border-radius: 50%;">
+                  &nbsp; &nbsp; &nbsp; &nbsp;
+                  {{item.Name}}
+                </td>
+                <td class="cell100 column1" style="text-align: center;">
+                 
+                  <a class="btn btn-info" style="font-size: medium; width:90px; color:white"
+                   routerLink="/StudentProfile" >Profile</a>
+                   &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                 
+                 
+                   <!--popup schule  -->
+                    <button class="btn" style="color: #31a8cc; font-size: medium; width:90px; background-color: whitesmoke; border:#31a8cc 1px solid;" data-toggle="modal" data-target="#mymodalSchedule">Schedule</button>
+                    <div class="modal" id="mymodalSchedule">
+                        <div class="modal-dialog " style="margin-right:45%">
+                            <div class="modal-content" style="margin-top: 100px; width: 157%; margin-left: 17%; ">
+                                <!-- <div class="modal-header" style="background-color: #f7c552;">
+                                    <p class="modal-title">Report</p>
+                                </div> -->
+                                <div class="modal-body">                          
+                                   <app-subject-schule></app-subject-schule>
+                                </div>
+                                <div class="modal-footer">
+                                    <p>Close <span class="close" data-dismiss="modal">&times;</span></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>     
+              </tr>
+            <!-- </tbody> -->
+          </table>
+  
+        </div>
+     
+  </div>
+      </div>
+   </div>
+
+  <div class="btnStudent" style="text-align: center;" >
+  <a   class="btn btn-warning" routerLink="/AddStudent" style="border-radius: 30px">Add children</a>
+  <a  class="btn btn-warning"  routerLink="/ParentJoinGroup" style="border-radius: 30px">Join group</a>
+</div>
+
+
+<script src="../../../../../assets/popup/js/JQuery-3.3.1.min.js"></script>
+<script src="../../../../../assets/popup/js/popper.js"></script>
+<script src="../../../../../assets/popup/js/bootstrap.js"></script>

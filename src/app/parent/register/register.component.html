@@ -1,0 +1,202 @@
+<app-navbar-header></app-navbar-header> 
+<!-- <app-add-student></app-add-student> -->
+
+    <div class="page-wrapper bg-gra-01 p-t-180 p-b-100 font-poppins" style="width: 60%; margin-left: 20%;">
+        <div class="wrapper wrapper--w780">
+            <div class="card card-3">
+                <div class="card-body"style="padding:0px;" >
+                    <div class="row" style="height: 1000px;">
+                        <div class="col-md-7">
+                            <img src="../../../assets/img/Picture14.jpg" style="height: 100%;">
+                        </div>
+                        <div class="col-md-5" style="padding: 20px;">
+                            <h2 class="title">Registration Parent</h2>
+                           
+                            <form method="POST">
+                                <div class="input-group  form-group">                      
+                                    <input class="input--style-3 form-control" 
+                                    [(ngModel)]="firstname" type="text" placeholder="Firstname" name="firstnamee"
+                                    #firstnamee="ngModel" required >
+                                                                                  
+                                          <div class="spanValidation"  *ngIf="firstnamee.invalid && (firstnamee.dirty || firstnamee.touched)">                                
+                                           <span > UnValid Firstname </span>
+                                      <!-- <span class="spanValidation" *ngIf="firstnamee.errors.required"></span>                                 -->
+                                         </div>
+                                </div> 
+
+                                <div class="input-group">
+                                    <input class="input--style-3 form-control" [(ngModel)]="lastname" type="text" 
+                                    placeholder="Lastname" name="lastnamee"  #lastnamee="ngModel" required>
+                                    <span class="spanValidation"   *ngIf="lastnamee.invalid && (lastnamee.dirty || lastnamee.touched)">                                
+                                        Lastname is required</span>  
+                                </div>
+                            
+                                 <div class="input-group form-group">
+                                    <input class="input--style-3 form-control" [(ngModel)]="username" type="text" name="usernameee"
+                                    placeholder="Username" #usernameee="ngModel" required>
+                                    <span class="spanValidation" *ngIf="usernameee.invalid && (usernameee.dirty || usernameee.touched)">                                
+                                       *</span> 
+                                  </div>
+        
+                                  <div class="input-group">
+                                    <input class="input--style-3 form-control" [(ngModel)]="mobile" type="text" placeholder="Mobile" 
+                                      maxlength="11" minlength="11" name="mobilee" pattern="[0-9]{10}"  #mobilee="ngModel" required>
+                                      <div class="spanValidation"   *ngIf="mobilee.invalid && (mobilee.dirty || mobilee.touched)">                                
+                                        *</div>
+                                        <div class="spanValidation" *ngIf="mobilee.errors.minlength">Mobile must be equal 11</div>
+                                  </div>
+
+                                  <div class="form-row form-group">
+                                    <div class="input-group ">
+                                        <div class="rs-select2 js-select-simple select--no-search ">
+                                            <select class="form-control" name="governatee" (change)="selectCity(governate)" [(ngModel)]="governate"
+                                            #governatee="ngModel" required  style="margin-right: 190px;width: 50%;background: transparent; color: #ccc;">
+                                               <option disabled="disabled" selected="selected">Selected Government</option>
+                                                <option *ngFor="let item of allgovs" [value]="item.governmentId" 
+                                                 >{{item.governmentName}}</option>                              
+                                            </select>
+                                            <div class="select-dropdown"></div>
+                                        
+                                        </div>
+                                        <span class="spanValidation" *ngIf="governatee.invalid && (governatee.dirty || governatee.touched)">                                
+                                            *</span>
+                                        </div>
+                                    
+                                    <div class="input-group">
+                                        <div class="rs-select2 js-select-simple select--no-search">
+                                            <select class="form-control"  name="citey" [(ngModel)]="city"
+                                            #citey="ngModel" required style="margin-right: 190px;width: 50%;background: transparent; color: #ccc;">
+                                                <option  disabled="disabled" selected="selected">Selected City</option>
+                                                <option *ngFor="let item of allcitis" [value]="item.cityId" 
+                                               >{{item.cityName}}</option>
+                                              
+                                            </select>
+                                            <div class="select-dropdown"></div>
+                                        </div>
+                                        <span class="spanValidation" *ngIf="citey.invalid && (citey.dirty || citey.touched)">                                
+                                            *</span>
+                                    </div>
+            
+                                    <div class="input-group">
+                                        <input class="input--style-3" [(ngModel)]="street" type="text" placeholder="Street" name="streeet">
+                                    </div>
+                                  </div> 
+                             
+                                  <div class="input-group form-group">
+                                    <input class="input--style-3 form-control" [(ngModel)]="email" type="email" placeholder="Email" 
+                                    name="emaeil"  #emaeil="ngModel" pattern="^[a-zA-Z0-9]*@[A-Za-z0-z0-9]+.[a-zA-Z]{2,4}$" required>
+                                    <div class="spanValidation" 
+                                        *ngIf="emaeil.invalid && (emaeil.dirty || emaeil.touched)">                                
+                                        <span >*</span>
+                                        </div>
+                                  </div>
+                                  <div class="input-group  form-group" ng-controller="myPass">
+                                    <input class="input--style-3 form-control" [(ngModel)]="pass" type="text" 
+                                      placeholder="Password" value="xxx"
+                                      name="paess"  required>
+                                  </div>
+                                  <div class="input-group form-group">
+                                    <input class="input--style-3 form-control" 
+                                    type="text" placeholder="Confirm password" name="confiremPass" [(ngModel)]="confiremPassordd"
+                                     #confiremPass="ngModel" my-directive required 
+                                     (change)="checkPassWithConfirm()">
+         
+                                     <div class="spanValidation"  *ngIf="checkPass === false">                                
+                                         <span >*</span>
+                                     </div>
+                                   </div> 
+                                   <div class="input-group">
+                                        <input class="input--style-3" [(ngModel)]="pic" type="file" placeholder="Picture" name="peic">
+                                    </div>
+                                    <div class="p-t-10">
+                                         <button class="btn btn--pill btn--green" type="submit" (click)="addParent()">Submit</button>
+                                    </div>
+                                <!-- <div class="input-group  form-group">                      
+                                    <input class="input--style-3 form-control" 
+                                    [(ngModel)]="firstname" type="text" placeholder="Firstname" name="firstnamee"
+                                    #firstnamee="ngModel" required >
+                                                                                  
+                                    <div class="spanValidation"  *ngIf="firstnamee.invalid && (firstnamee.dirty || firstnamee.touched)">                                
+                                           <span > UnValid Firstname </span>
+                                    </div>
+                                </div>  -->
+                                                   
+                                <!-- <div class="input-group">
+                                    <input class="input--style-3" type="text" placeholder="Last Name" name="lastname">
+                                </div> -->
+
+                                <!-- <div class="input-group">
+                                    <input class="input--style-3" type="text" placeholder="Username" name="username">
+                                </div> -->
+                                <!-- <div class="input-group">
+                                    <input class="input--style-3" type="text" placeholder="Mobile" name="mobile">
+                                </div> -->
+        
+                                <!-- <div class="form-row">
+                                <div class="input-group">
+                                    <div class="rs-select2 js-select-simple select--no-search">
+                                        <select name="governate"  style="margin-right: 190px;width: 50%; background: transparent; color: #ccc;">
+                                            <option disabled="disabled" selected="selected">Governament</option>                              
+                                        </select>
+                                        <div class="select-dropdown"></div>
+                                    </div>
+                                </div>
+        
+                                <div class="input-group">
+                                    <div class="rs-select2 js-select-simple select--no-search">
+                                        <select name="city"  style="margin-right: 190px;width: 50%; background: transparent; color: #ccc; ">
+                                            <option disabled="disabled" selected="selected">City</option>
+                                          
+                                        </select>
+                                        <div class="select-dropdown"></div>
+                                    </div>
+                                </div>
+        
+                                <div class="input-group">
+                                    <input class="input--style-3" type="text" placeholder="Street" name="street">
+                                </div>
+        
+        
+                                </div>     -->
+                                <!-- <div class="input-group">
+                                    <input class="input--style-3" type="text" placeholder="Email" name="email">
+                                </div> -->
+        
+                                <!-- <div class="input-group">
+                                    <input class="input--style-3" type="text" placeholder="Password" name="pass">
+                                </div> -->
+        
+                                <!-- <div class="input-group">
+                                    <input class="input--style-3" type="text" placeholder="Confirm password" name="confirmPass">
+                                </div> -->
+        
+                                <!-- <div class="input-group">
+                                    <input class="input--style-3" type="file" placeholder="Picture" name="pic">
+                                </div> -->
+
+                                <!-- <div class="p-t-10">
+                                    <button class="btn btn--pill btn-info btn--green" type="submit">Submit</button>
+                                </div> -->
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Jquery JS-->
+    <script src="assets/register/vendor/jquery/jquery.min.js"></script>
+    <!-- Vendor JS-->
+    <script src="assets/register/vendor/select2/select2.min.js"></script>
+    <script src="assets/register/vendor/datepicker/moment.min.js"></script>
+    <script src="assets/register/vendor/datepicker/daterangepicker.js"></script>
+
+    <!-- Main JS-->
+    <script src="assets/register/js/global.js"></script>
+
+
+
+
+
+<app-Corefooter></app-Corefooter>

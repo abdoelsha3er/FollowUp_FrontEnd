@@ -1,0 +1,146 @@
+<link href="../../../../../assets/css/bootstraps.css" rel="stylesheet" />
+<link href="../../../../../assets/css/font-awesome.css" rel="stylesheet" />
+<app-teacher-nav></app-teacher-nav>
+<div class="container">
+  <div class="row">
+    <app-teacher-bio></app-teacher-bio>
+  </div>
+</div>
+ <div class="container cardes">  
+  <div id="accordion">
+      <div class="card">
+          <div class="card-header">
+              <button class="btn btn-link data" data-toggle="collapse" data-target="#cardone">Schools <span>+</span></button>
+          </div>
+          <div id="cardone" class="collapse show" data-parent="#accordion">
+              <div class="card-body ">
+                <app-list-teacher-school></app-list-teacher-school>
+              </div>
+              <div class="card-footer">
+                <button class="btn btn-primary text-center" data-toggle="modal" data-target="#mymodal"><h6>Add School</h6></button>
+                <!-- <app-add-teacher-school id="mymodal"></app-add-teacher-school> -->
+                <div class="modal" id="mymodal">
+                  <div class="modal-dialog">
+                      <div class="modal-content">
+                          <div class="modal-header">
+                              <p class="modal-title">Add Schools </p>
+                          </div>
+                          <div class="modal-body">
+                            <app-add-teacher-school ></app-add-teacher-school>
+                          </div>
+                          <div class="modal-footer">
+                            <p ><span class="close closeaddschool" data-dismiss="modal">&times;</span></p>
+                          </div>
+                      </div>
+                  </div>
+                </div>
+              </div>
+          </div>
+      </div>
+      <div class="card">
+          <div class="card-header">
+              <button class="btn btn-link data" data-toggle="collapse" data-target="#cardtwo">Subjects <span>+</span></button>
+          </div>
+          <div id="cardtwo" class="collapse show" data-parent="#accordion">
+              <div class="card-body  ">
+                <app-list-teacher-subject></app-list-teacher-subject>
+              </div>
+              <div class="card-footer">
+                <button class="btn btn-primary" data-toggle="modal" data-target="#mymodalsubject">Add Subject</button>
+                <div class="modal" id="mymodalsubject">
+                  <div class="modal-dialog">
+                      <div class="modal-content">
+                          <div class="modal-header">
+                              <p class="modal-title">Add Subject </p>
+                          </div>
+                          <div class="modal-body">
+                            <app-add-teacher-subject ></app-add-teacher-subject>
+                          </div>
+                          <div class="modal-footer">
+                            <p ><span class="close closeaddsubject" data-dismiss="modal">&times;</span></p>
+                          </div>
+                      </div>
+                  </div>
+                </div>
+              </div>
+          </div>
+      </div>
+      <div class="card">
+          <div class="card-header">
+              <button class="btn btn-link data" data-toggle="collapse" data-target="#cardthree">Education <span>+</span></button>
+          </div>
+          <div id="cardthree" class="collapse show" data-parent="#accordion">
+              <div class="card-body  ">
+                 <app-list-teacher-education></app-list-teacher-education>
+              </div>
+              <div class="card-footer">
+                <button class="btn btn-primary" data-toggle="modal" data-target="#mymodaleducation">Add Education</button>
+                <div class="modal" id="mymodaleducation">
+                  <div class="modal-dialog">
+                      <div class="modal-content">
+                          <div class="modal-header">
+                              <p class="modal-title">Add Education </p>
+                          </div>
+                          <div class="modal-body">
+                            <app-add-teacher-education ></app-add-teacher-education>
+                          </div>
+                          <div class="modal-footer">
+                            <p ><span class="close closeaddeducation" data-dismiss="modal">&times;</span></p>
+                          </div>
+                      </div>
+                  </div>
+                </div>
+              </div>
+          </div>
+      </div>
+      <div class="card">
+        <div class="card-header">
+            <button class="btn btn-link data" data-toggle="collapse" data-target="#cardfour">Experience <span>+</span></button>
+        </div>
+        <div id="cardfour" class="collapse show" data-parent="#accordion">
+            <div class="card-body ">
+              <app-list-teacher-experience></app-list-teacher-experience>
+            </div>
+            <div class="card-footer">
+              <button class="btn btn-primary" data-toggle="modal" data-target="#mymodalexperience">Add Experience</button>
+              <div class="modal" id="mymodalexperience">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <p class="modal-title">Add Experience </p>
+                        </div>
+                        <div class="modal-body">
+                          <app-add-teacher-experience ></app-add-teacher-experience>
+                        </div>
+                        <div class="modal-footer">
+                          <p ><span class="close closeaddexperience" data-dismiss="modal">&times;</span></p>
+                        </div>
+                    </div>
+                </div>
+              </div>
+            </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-header">
+            <button class="btn btn-link data" data-toggle="collapse" data-target="#cardfive">Social Links <span>+</span></button>
+        </div>
+        <div id="cardfive" class="collapse show" data-parent="#accordion">
+            <div class="card-body ">
+              <app-list-teacher-links></app-list-teacher-links>
+            </div>
+        </div>
+      </div>
+  </div>
+</div>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br> 
+<app-user-footer></app-user-footer>
+
+<script src="../../../../../assets/js/JQuerys-3.3.1.js"></script>
+<script src="../../../../../assets/js/poppers.js"></script>
+<script src="../../../../../assets/js/bootstraps.js"></script>

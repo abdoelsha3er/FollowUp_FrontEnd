@@ -1,0 +1,51 @@
+.table{
+    background-color: white;
+    box-shadow: 1px 1px 1px lightgray ,-1px -1px 1px whitesmoke;
+    
+
+}
+.groupimg
+{
+    border-radius: 50%;
+    width: 150px; 
+    height: 150px;
+    margin-top: 120px;
+    margin-left: 30px;
+}
+.card-head
+{
+    height:10%;
+    background-color: #f7c552;
+    color:white;
+    text-align: center;
+    font-size: large;
+    width: 93%;
+    margin-left: 8px;
+}
+.detailsgroup
+{
+    text-align: center;
+     background-color: #f7c552; 
+     font-size: larger; 
+     width: 60px;
+    color: white;
+}
+.my-custom-scrollbar 
+{
+    position: relative;
+    height: 420px;
+    overflow: auto;
+    width: 80%;
+    margin-left: 50px;
+}
+.table-wrapper-scroll-y
+{
+    display: block;
+}
+.studentimg
+{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+    

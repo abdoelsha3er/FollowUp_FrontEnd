@@ -1,0 +1,29 @@
+.schools{
+    color: gray;
+}
+.data
+{
+    font-size: x-large;
+}
+.modal-content{
+    margin-top: 30%;
+}
+.modal-dialog{
+    margin-top: 12%;
+}
+.closeaddschool{
+    font-size: x-large;
+}
+.closeaddsubject{
+    font-size: x-large;
+}
+.closeaddeducation{
+    font-size: x-large;
+}
+.closeaddexperience{
+    font-size: x-large;
+}
+.cardes{
+    width:70%;
+    margin-right: 20%;
+}

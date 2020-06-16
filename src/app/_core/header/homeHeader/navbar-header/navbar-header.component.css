@@ -1,0 +1,25 @@
+.homenav{
+    /* background-color:#f2f2f2; */
+    background: transparent;
+    /* position: fixed; */
+       position: absolute;
+
+}
+.navbar-brand {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 25px;
+    text-transform: uppercase;
+    color: #33c1cf!important;
+    transition: all 0.5s;
+}
+
+.navbar-nav>li>a {
+    color:#33c1cf!important;
+    font-size: 13px;
+    font-weight: 300;
+    text-transform: uppercase;
+    text-shadow: none;
+    line-height: 80px;
+    padding: 0px;
+    letter-spacing: 0.5px;
+}

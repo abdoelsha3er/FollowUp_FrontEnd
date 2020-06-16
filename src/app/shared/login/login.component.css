@@ -1,0 +1,41 @@
+.card
+{
+    width: 40%;
+    height: 28%;
+    margin-top:7%;
+    margin-left: 28%;
+    box-shadow: gray 1px 1px 10px;
+}
+.card-head
+{
+    height: 20%;
+    background-color: #f7c552;
+    color: white;
+    text-align: center;
+    font-size: x-large;
+    padding: 20px;
+ 
+}
+.card-body
+{
+    margin-top: 5px;
+    padding: 5px;
+}
+.card-footer
+{
+    height: 20%;
+}
+.save{
+    margin-bottom: 25px;
+    width: 30%;
+    margin-right: 15px;
+    text-align: center;
+}
+.rememberme>input
+{
+    margin-left:20px;
+}
+.rememberme>label
+{
+    margin-left: 6px;
+}

@@ -1,0 +1,60 @@
+.card
+{
+    width: 50%;
+    height: 45%;
+    margin-top:7%;
+    margin-left: 25%;
+    box-shadow: gray 1px 1px 10px;
+}
+.card-head
+{
+    height: 12%;
+    background-color: #f7c552;
+    color:white;
+    text-align: center;
+    font-size: x-large;
+    padding: 10px;
+}
+.card-body
+{
+    margin-top:2px;
+    padding: 5px;
+}
+.days{
+    margin-left: 30px;
+}
+.day>label{
+    margin-left: 10px;
+
+}
+.save{
+    margin-bottom: 25px;
+    width: 30%;
+}
+.EGP{
+    
+    margin-top: 2px;
+}
+.price{
+    padding: 0px;
+}
+.price>input{
+    width: 100%;
+}
+
+.input--style-3
+{
+    height: 23px;
+}
+.datefrom
+{
+ 
+    margin-left: 5px;
+}
+.timefrom
+{
+    width: 70px;
+    display:inline;
+     
+    
+}

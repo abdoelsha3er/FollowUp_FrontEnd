@@ -1,0 +1,41 @@
+.details{
+    background-color: #f7c552;
+    /* color: #f7c552; */
+
+}
+.detail{
+    margin-top: 100px;
+}
+.container{
+    margin-top: 100px;
+}
+.btn{
+    width:15%;
+    font-size: small;
+}
+.table{
+    margin-top: 130px;
+    background-color: white;
+    box-shadow: 1px 1px 6px lightgray ,-1px -1px 6px whitesmoke;
+}
+.head
+{
+    background-color:lightblue;
+    font-size: medium;
+}
+.no
+{
+    background-color: gray;
+    color: white;
+}
+.allgroup{
+    margin-left: 38%;
+    font-size: x-large;
+
+}
+.addgroup
+{
+    font-size: medium;
+    margin-top: 40px;
+    /* border-radius: 50%; */
+}

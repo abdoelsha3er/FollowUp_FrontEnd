@@ -1,0 +1,11 @@
+<div>
+    <form method="POST">
+    <div class="form-row">
+        <div class="input-group col-md-12 form-group">
+            <label for="schoolname">School Name</label>
+            <input type="text" [(ngModel)]="school.SchoolName"class="form-control" name="schoolname"  placeholder="Enter School Name">
+        </div>
+        <button class="btn btn-info addschool" (click)="add()">Add</button>
+    </div>
+</form>
+</div>

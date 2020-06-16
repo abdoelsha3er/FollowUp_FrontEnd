@@ -1,0 +1,115 @@
+
+<div>
+<app-navbar-header></app-navbar-header>
+</div>
+
+<head>
+    <!--===============================================================================================-->	
+        <link rel="icon" type="image/png" href="../../../../../../../../../assets/tables/images/icons/favicon.ico"/>
+    <!--===============================================================================================-->
+        <link rel="stylesheet" type="text/css" href="../../../../../../../../../assets/tables/vendor/bootstrap/css/bootstrap.min.css">
+    <!--===============================================================================================-->
+        <link rel="stylesheet" type="text/css" href="../../../../../../../../../assets/tables/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+    <!--===============================================================================================-->
+        <link rel="stylesheet" type="text/css" href="../../../../../../../../../assets/tables/vendor/animate/animate.css">
+    <!--===============================================================================================-->
+        <link rel="stylesheet" type="text/css" href="../../../../../../../../../assets/tables/vendor/select2/select2.min.css">
+    <!--===============================================================================================-->
+        <link rel="stylesheet" type="text/css" href="../../../../../../../../../assets/tables/vendor/perfect-scrollbar/perfect-scrollbar.css">
+    <!--===============================================================================================-->
+        <link rel="stylesheet" type="text/css" href="../../../../../../../../../assets/tables/css/util.css">
+        <link rel="stylesheet" type="text/css" href="../../../../../../../../../assets/tables/css/main.css">
+    <!--===============================================================================================-->
+
+
+
+    <link href="../../../../../../../../../assets/popup/css/bootstrap.css" rel="stylesheet" />
+    <link href="../../../../../../../../../assets/popup/css/font-awesome.css" rel="stylesheet" />
+    </head>
+    
+     <div class="container-table100" style="margin-top: 5%; margin-bottom: 5%;">
+      <div class="wrap-table100">
+        <div class="table100 ver1 m-b-10" style="margin-top: 3%; width:65%; height: 500px; margin-left: 17%; overflow:auto;"  >
+          <div class="table100-head">
+            <table >
+              <thead>
+                <tr class="row100 head" style="background-color: lightblue; height: 60px;">
+                  <td class="cell100 column1">Date</td>
+                  <td class="cell100 column2"></td>
+                  <td class="cell100 column2"></td>
+                  
+                </tr>
+    
+              </thead>
+            </table>
+          </div>
+    
+          <div class="table100-body js-pscroll">
+            <table>
+              <tbody>
+                <tr class="row100 body" *ngFor="let item of reports ; let i = index" style="height: 60px;">
+                  <td class="cell100 column1">{{item.date}}</td>
+                  <td class="cell100 column2">
+                    <!-- <a class="btn btn-success" style="color: white; font-size: 20px;"href="StudentShowReport" >Show</a> -->
+                
+                    <button class="btn btn-success" style="color: white; font-size: 14px;" data-toggle="modal" data-target="#mymodal">Show Modal</button>
+                    <div class="modal" id="mymodal">
+                        <div class="modal-dialog " style="margin-right:45%">
+                            <div class="modal-content" style="margin-top:85px; width: 106%; margin-left:30%; ">
+                                <div class="modal-header" style="background-color: #f7c552;">
+                                    <p class="modal-title">Report</p>
+                                </div>
+                                <div class="modal-body">                          
+                                   <app-show-report></app-show-report>
+                                </div>
+                                <div class="modal-footer">
+                                    <p>Close <span class="close" data-dismiss="modal">&times;</span></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                
+                  </td>
+
+                  <td class="cell100 column3">
+                    <!-- <button class="btn btn-danger" style="color: white; font-size: 20px;" >Delete</button> -->
+                  
+                  
+                   <button class="btn btn-danger" style="width: 100px; font-size: 17px;" data-toggle="modal" data-target="#mymodaldelete">Delete</button>
+                               <div class="modal" id="mymodaldelete">
+                                   <div class="modal-dialog " style="margin-top: 100px;  margin-right:27%;width:50%; height: 200px; ">
+                                       <div class="modal-content" >
+                                           <div class="modal-header" style="background-color: #f7c552;">
+                                               <p class="modal-title" style="font-size: 20px;">Delete </p>
+                                           </div>
+                                           <div class="modal-body"  >
+                                              <p style="font-size: 20px; margin-top: 5%;">Are you sure to delete this report?</p>
+                                              <button style="width: 100px; font-size: 15px; margin-left: 30%; margin-top: 10%;" class="btn btn-danger">Yes</button>
+                                              <button style=" width: 100px;font-size: 15px; margin-left: 3%;  margin-top: 10%; " class="btn btn-primary">No</button>
+                                           </div>
+                                           <div class="modal-footer">
+                                               <p>Close <span class="close" data-dismiss="modal">&times;</span></p>
+                                           </div>
+                                       </div>
+                                   </div>
+                               </div>
+
+                  </td>
+                </tr>
+    
+              </tbody>
+            </table>
+    
+          </div>
+   
+        </div>
+    </div>
+    </div>
+        <app-Corefooter></app-Corefooter>
+
+
+      
+              <script src="../.././../../../../../../../assets/popup/js/JQuery-3.3.1.min.js"></script>
+    <script src="../.././../../../../../../../assets/popup/js/popper.js"></script>
+    <script src="../.././../../../../../../../assets/popup/js/bootstrap.js"></script>
+   

@@ -1,0 +1,16 @@
+/*Profile Pic End*/
+.table{
+    text-align: center;
+    
+}
+
+.table th{
+    text-align: center;
+}
+
+.table[_ngcontent-mms-c6] {
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 0px;
+    background-color: transparent;
+}

@@ -1,0 +1,27 @@
+.teachernav{
+    background-color:#33c1cf;
+    /* position: fixed; */
+       position: absolute;
+
+}
+.Profile{
+    border-radius: 50%;
+    width: 45px;
+    height: 45px;
+    margin-top: 15px;
+}
+.Profile>i{
+    font-size: larger;
+}
+.dropprofile{
+    margin-left: -52px;
+}
+.Group{
+    margin-top: 8px;
+    color:gray;
+    background:rgba(255,255,255,0);
+}
+.container
+{
+    width: 100%;
+}

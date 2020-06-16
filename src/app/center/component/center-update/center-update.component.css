@@ -1,0 +1,28 @@
+.card
+{
+    width: 50%;
+    height: 45%;
+    margin-top:7%;
+    margin-left: 25%;
+    box-shadow: gray 1px 1px 10px;
+}
+.card-head
+{
+    height: 12%;
+    background-color: #f7c552;
+    color:white;
+    text-align: center;
+    font-size: x-large;
+    padding: 10px;
+}
+.card-body
+{
+    margin-top:2px;
+    padding: 5px;
+}
+
+.save{
+    margin-bottom: 25px;
+    width: 18%;
+  
+}

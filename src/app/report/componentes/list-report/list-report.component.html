@@ -1,0 +1,80 @@
+<link href="../../../../assets/css/bootstraps.css" rel="stylesheet" />
+<link href="../../../../assets/css/font-awesome.css" rel="stylesheet" />
+<app-teacher-nav></app-teacher-nav>
+<div class="container">
+  
+    <div class="allgroup">ALL Report</div>
+    <a  routerLink="/teacher/add/report"><button class="btn btn-info addreport">Add Report</button></a>
+<table class="table table-bordered text-center">
+    <tr class="head">
+        <td> Date </td>
+        <td > Option </td>
+    </tr>
+    <tr>
+        <td> 6/6/2020 </td>
+        <td>  
+            <a  routerLink="/teacher/details/report"><button class="btn btn-primary" > Details </button></a>
+            &nbsp;&nbsp;&nbsp;&nbsp;
+            <a  routerLink="/teacher/edit/report"><button class="btn btn-warning" > Edit </button></a>
+            &nbsp;&nbsp;&nbsp;&nbsp;
+            <button class="btn btn-danger" data-toggle="modal" data-target="#mymodaldelete">Delete</button>
+            <div class="modal" id="mymodaldelete">
+              <div class="modal-dialog">
+                  <div class="modal-content detail">
+                      <div class="modal-header details">
+                          <h3 class="modal-title text-light"> Delete  </h3>
+                      </div>
+                      <div class="modal-body bg-light">
+                        Are You Sure To Delete This Report
+                        <br>
+                        <br>
+                        <button class="btn btn-danger ">Yes</button>
+                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <button class="btn no ">No</button>
+                      </div>
+                      <div class="modal-footer">
+                        <p ><span class="close closeaddexperience" data-dismiss="modal">&times;</span></p>
+                      </div>
+                  </div>
+              </div>
+            </div>
+            &nbsp;&nbsp;&nbsp;&nbsp;
+            <button class="btn btn-success" >Send Report </button>
+            &nbsp;&nbsp;&nbsp;&nbsp;
+            <a  routerLink="/teacher/send/report" style="background-color: white;"><button class="btn " style=" background-color:#3e98b6;color:white;" > Show Report </button></a>
+        </td>
+    </tr>
+    <tr>
+      
+  
+</table>
+</div>
+
+
+
+
+
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<app-user-footer></app-user-footer>
+<script src="../../../../assets/js/JQuerys-3.3.1.js"></script>
+<script src="../../../../assets/js/poppers.js"></script>
+<script src="../../../../assets/js/bootstraps.js"></script>
+

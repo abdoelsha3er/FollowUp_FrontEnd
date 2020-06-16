@@ -1,0 +1,134 @@
+<app-navbar-header></app-navbar-header>
+
+<div class="page-wrapper bg-gra-01 p-t-180 p-b-100 font-poppins" style="width: 60%; margin-left: 20%;">
+    <div class="wrapper wrapper--w780">
+        <div class="card card-3">
+            <div class="card-body"style="padding:0px;" >
+                <div class="row" style="height: 1000px;">
+                    <div class="col-md-7">
+                        <img src="../../../assets/img/Picture15.jpg" style="height: 100%;">
+                    </div>
+                    <div class="col-md-5" style="padding: 20px;">
+                        <h2 class="title">Registration Teacher</h2>
+                        <form method="POST">
+                            <div class="input-group">
+                                <input class="input--style-3" type="text" placeholder="First Name" [(ngModel)]="teacher.FirstName" name="firstnamee"
+                                #firstnamee="ngModel" required >
+                                                                              
+                                <div class="spanValidation"  *ngIf="firstnamee.invalid && (firstnamee.dirty || firstnamee.touched)">                                
+                                       <span > UnValid Firstname </span>
+                                </div>
+                            </div>
+    
+                            <div class="input-group">
+                                <input class="input--style-3" type="text" placeholder="Last Name" [(ngModel)]="teacher.LastName" name="lastnamee"  
+                                #lastnamee="ngModel" required>
+                                <span class="spanValidation"   *ngIf="lastnamee.invalid && (lastnamee.dirty || lastnamee.touched)">                                
+                                    Lastname is required</span>  
+                            </div>
+                        
+                            <div class="input-group">
+                                <input class="input--style-3" type="text" placeholder="Username" [(ngModel)]="teacher.UserName"  name="usernameee"
+                                placeholder="Username" #usernameee="ngModel" required
+                                >
+                                <span class="spanValidation" *ngIf="usernameee.invalid && (usernameee.dirty || usernameee.touched)">                                
+                                   *</span> 
+                            </div>
+                           
+                            <!-- <div class="form-row form-group">
+                                <div class="input-group ">
+                                    <div class="rs-select2 js-select-simple select--no-search ">
+                                        <select class="form-control" name="governatee" (change)="selectCity(governate)" [(ngModel)]="governate"
+                                        #governatee="ngModel" required  style="margin-right: 190px;width: 50%;background: transparent; color: #ccc;">
+                                           <option disabled="disabled" selected="selected">Selected Government</option>
+                                            <option *ngFor="let item of allgovs" [value]="item.governmentId" 
+                                             >{{item.governmentName}}</option>                              
+                                        </select>
+                                        <div class="select-dropdown"></div>
+                                    
+                                    </div>
+                                    <span class="spanValidation" *ngIf="governatee.invalid && (governatee.dirty || governatee.touched)">                                
+                                        *</span>
+                                    </div>
+                                
+                                <div class="input-group">
+                                    <div class="rs-select2 js-select-simple select--no-search">
+                                        <select class="form-control"  name="citey" [(ngModel)]="teacher.CityId"
+                                        #citey="ngModel" required style="margin-right: 190px;width: 50%;background: transparent; color: #ccc;">
+                                            <option  disabled="disabled" selected="selected">Selected City</option>
+                                            <option *ngFor="let item of allcitis" [value]="item.cityId" 
+                                           >{{item.cityName}}</option>
+                                          
+                                        </select>
+                                        <div class="select-dropdown"></div>
+                                    </div>
+                                    <span class="spanValidation" *ngIf="citey.invalid && (citey.dirty || citey.touched)">                                
+                                        *</span>
+                                </div>
+        
+                                <div class="input-group">
+                                    <input class="input--style-3" [(ngModel)]="teacher.AddressDetails" type="text" placeholder="Street" name="streeet">
+                                </div>
+                              </div>     -->
+                              <div class="input-group form-group">
+                                <input class="input--style-3 form-control" [(ngModel)]="teacher.Email" type="email" placeholder="Email" 
+                                name="emaeil"  #emaeil="ngModel" pattern="^[a-zA-Z0-9]*@[A-Za-z0-z0-9]+.[a-zA-Z]{2,4}$" required>
+                                <div class="spanValidation" 
+                                    *ngIf="emaeil.invalid && (emaeil.dirty || emaeil.touched)">                                
+                                    <span >*</span>
+                                    </div>
+                              </div>
+    
+                              <div class="input-group  form-group" ng-controller="myPass">
+                                <input class="input--style-3 form-control" [(ngModel)]="teacher.Password" type="text" 
+                                  placeholder="Password" value="xxx"
+                                  name="paess"  required>
+                              </div>
+                              <div class="input-group form-group">
+                                <input class="input--style-3 form-control" 
+                                type="text" placeholder="Confirm password" name="confiremPass" [(ngModel)]="confiremPassordd"
+                                 #confiremPass="ngModel" my-directive required 
+                                 (change)="checkPassWithConfirm()">
+     
+                                 <div class="spanValidation"  *ngIf="checkPass === false">                                
+                                     <span >*</span>
+                                 </div>
+                               </div> 
+
+                            <div class="input-group">
+                            <input type="date" id="start" name="trip-start"
+                            value="2018-07-22"
+                            min="2018-01-01" max="2018-12-31" class="input--style-3">            
+                             </div>
+                            <div class="input-group">
+                                <div class="rs-select2 js-select-simple select--no-search">
+                                    <select  [(ngModel)]="teacher.Gender" name="gender"
+                                     #gender="ngModel" required style="margin-right: 190px;width: 50%; background: transparent; color: #ccc; ">
+                                        <option >Male</option>
+                                        <option >Female</option>
+                                    </select>
+                                    <!-- <div class="select-dropdown"></div> -->
+                                </div>
+                                <span class="spanValidation" *ngIf="gender.invalid && (gender.dirty || gender.touched)">                                
+                                    *</span> 
+                            </div>
+                          
+                            <div class="input-group">
+                                <input class="input--style-3" type="file" placeholder="Picture" name="pic">
+                            </div>
+
+                            <div class="p-t-10">
+                               <button class="btn btn--pill btn-info btn--green" (click)="onSave()" type="submit">Submit</button>  
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<br><br><br>
+<app-user-footer></app-user-footer>

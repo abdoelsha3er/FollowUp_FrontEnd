@@ -1,0 +1,19 @@
+.schoolimg{
+    width: 40px;
+    height: 40px;
+    /* margin: 10px; */
+    display: block;
+    margin-left: 28px;
+}
+.schoolname
+{
+      text-align: left;
+}
+.container{
+    width: 80%;
+}
+.close
+{
+    background:rgba(255,255,255,0);
+    margin-right: 70px;
+}
