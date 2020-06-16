@@ -35,14 +35,14 @@
                                    *</span> 
                             </div>
                            
-                            <!-- <div class="form-row form-group">
+                            <div class="form-row form-group">
                                 <div class="input-group ">
                                     <div class="rs-select2 js-select-simple select--no-search ">
                                         <select class="form-control" name="governatee" (change)="selectCity(governate)" [(ngModel)]="governate"
                                         #governatee="ngModel" required  style="margin-right: 190px;width: 50%;background: transparent; color: #ccc;">
                                            <option disabled="disabled" selected="selected">Selected Government</option>
                                             <option *ngFor="let item of allgovs" [value]="item.governmentId" 
-                                             >{{item.governmentName}}</option>                              
+                                             >{{item.name}}</option>                              
                                         </select>
                                         <div class="select-dropdown"></div>
                                     
@@ -57,7 +57,7 @@
                                         #citey="ngModel" required style="margin-right: 190px;width: 50%;background: transparent; color: #ccc;">
                                             <option  disabled="disabled" selected="selected">Selected City</option>
                                             <option *ngFor="let item of allcitis" [value]="item.cityId" 
-                                           >{{item.cityName}}</option>
+                                           >{{item.name}}</option>
                                           
                                         </select>
                                         <div class="select-dropdown"></div>
@@ -69,7 +69,13 @@
                                 <div class="input-group">
                                     <input class="input--style-3" [(ngModel)]="teacher.AddressDetails" type="text" placeholder="Street" name="streeet">
                                 </div>
-                              </div>     -->
+                              </div>    
+
+
+
+
+
+
                               <div class="input-group form-group">
                                 <input class="input--style-3 form-control" [(ngModel)]="teacher.Email" type="email" placeholder="Email" 
                                 name="emaeil"  #emaeil="ngModel" pattern="^[a-zA-Z0-9]*@[A-Za-z0-z0-9]+.[a-zA-Z]{2,4}$" required>
@@ -96,7 +102,7 @@
                                </div> 
 
                             <div class="input-group">
-                            <input type="date" id="start" name="trip-start"
+                            <input type="date" [(ngModel)]="teacher.DateOfBirth" id="start" name="DateOfBirth"
                             value="2018-07-22"
                             min="2018-01-01" max="2018-12-31" class="input--style-3">            
                              </div>
@@ -104,8 +110,8 @@
                                 <div class="rs-select2 js-select-simple select--no-search">
                                     <select  [(ngModel)]="teacher.Gender" name="gender"
                                      #gender="ngModel" required style="margin-right: 190px;width: 50%; background: transparent; color: #ccc; ">
-                                        <option >Male</option>
-                                        <option >Female</option>
+                                        <option value="True" >Male</option>
+                                        <option value="False" >Female</option>
                                     </select>
                                     <!-- <div class="select-dropdown"></div> -->
                                 </div>
@@ -114,7 +120,7 @@
                             </div>
                           
                             <div class="input-group">
-                                <input class="input--style-3" type="file" placeholder="Picture" name="pic">
+                                <input class="input--style-3" type="file" (change)="onUploadPhoto()" #fileInput placeholder="Picture" name="file">
                             </div>
 
                             <div class="p-t-10">

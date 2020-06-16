@@ -43,7 +43,7 @@ export class RegisterComponent implements OnInit {
 
   ngOnInit() {
    this.govSrv.getAllGovermnts().subscribe( a => this.allgovs = a)
-   this.citSrv.getAllCities().subscribe(c => this.allcitis = c)
+  //  this.citSrv.getAllCities().subscribe(c => this.allcitis = c)
   }
  
 

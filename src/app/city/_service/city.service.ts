@@ -12,11 +12,11 @@ export class CityService {
 url = "http://localhost:6853/api/City/" 
 
 constructor(private http:HttpClient) { }
-getAllCities():Observable<City[]>{
-  return this.http.get<City[]>(this.url+"GetCity");
-}
+// getAllCities():Observable<City[]>{
+//   return this.http.get<City[]>(this.url+"GetCity");
+// }
 
-getcitiesByid(id:number):Observable<City[]>{
-  return this.http.get<City[]>(this.url+"GetCityId/"+id);
+getcitiesByid(governmentId:number):Observable<City[]>{
+  return this.http.get<City[]>(this.url+ "GetCitiesByGovernmentId/"+ governmentId);
 }
 }
