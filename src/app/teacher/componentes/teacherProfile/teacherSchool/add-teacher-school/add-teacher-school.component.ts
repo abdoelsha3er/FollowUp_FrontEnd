@@ -9,13 +9,15 @@ import { TeacherSchoolsModels } from 'src/app/teacher/_models/teacher-schools-mo
 })
 export class AddTeacherSchoolComponent implements OnInit {
 
-  school:TeacherSchoolsModels= new TeacherSchoolsModels(7,"");
-  
+  // school:TeacherSchoolsModels= new TeacherSchoolsModels(0,2,"");
+  teacherSchool:TeacherSchoolsModels=new TeacherSchoolsModels(1,"",1);
   constructor(private teacherschool:TeacherSchoolService) { }
   
   add()
    {
-        this.teacherschool.addschool(this.school).subscribe();
+        this.teacherschool.add(this.teacherSchool).subscribe(a=>{
+          console.log("Teacher School Added Successfully!!!");
+        })
    }
 
   ngOnInit() {

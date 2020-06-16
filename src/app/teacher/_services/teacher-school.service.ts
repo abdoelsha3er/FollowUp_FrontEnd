@@ -11,24 +11,24 @@ export class TeacherSchoolService {
   private baseurl:string="http://localhost:6853/api/TeacherSchool"
   school:TeacherSchoolsModels;
   teacher:TeacherModels=new TeacherModels("","","","","","",1,"","",new Date("01/07/1993").toLocaleDateString(),"");
- 
 
-addschool(school)
-{
+  
+teacherSchool:TeacherSchoolsModels;
+add(teacherSchool){
   const form: FormData =new FormData();
-  form.append("TeacherId",school.TeacherId);
-  form.append("SchoolName",school.SchoolName);
+  form.append("SchoolName",teacherSchool.SchoolName)
+  form.append("TeacherId",teacherSchool.TeacherId);
   return this.http.post<any>(this.baseurl+"/AddTeacherSchool",form)
-
 }
+
 getall(TeacherId:number)
 {
   return this.http.get<any>(this.baseurl+"/GetTeacherSchools/"+TeacherId);
 
 }
-delete(school)
+delete(teacherSchoolId)
 {
-  return this.http.delete<any>(this.baseurl+"/DeleteTeacherSchool",school)
+  return this.http.delete(this.baseurl+"/DeleteTeacherSchool/"+teacherSchoolId)
 
 }
   constructor(private http:HttpClient) { }

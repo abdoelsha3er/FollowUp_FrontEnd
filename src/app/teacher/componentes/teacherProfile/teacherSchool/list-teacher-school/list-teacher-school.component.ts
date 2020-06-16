@@ -10,7 +10,7 @@ import { TeacherSchoolsModels } from 'src/app/teacher/_models/teacher-schools-mo
 export class ListTeacherSchoolComponent implements OnInit {
 
   constructor(private schoolservice:TeacherSchoolService) { }
-  sch:TeacherSchoolsModels= new TeacherSchoolsModels(1,"");
+  sch:TeacherSchoolsModels= new TeacherSchoolsModels(0,"",1);
  
   schools:TeacherSchoolsModels []=[];
 
@@ -23,5 +23,12 @@ export class ListTeacherSchoolComponent implements OnInit {
     );
   }
 
+    // Delete Product
+    DeleteTeacherSchool(teacherschoolid,indexs){
+      // remove from html
+      this.schoolservice.delete(teacherschoolid).subscribe(a=>{
+        this.schools.splice(indexs,1); // remove it from array products , but it deleted in api from services
+      })
+    }
 
 }

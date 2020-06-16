@@ -79,6 +79,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatButtonModule} from '@angular/material/button';
 import { MatToolbarModule} from '@angular/material/toolbar';
 import { MatInputModule } from '@angular/material';
+import { TeacherSchoolService } from './teacher/_services/teacher-school.service';
 
 
 
@@ -175,7 +176,7 @@ import { MatInputModule } from '@angular/material';
     MatInputModule,
    
   ],
-  providers: [],
+  providers: [TeacherSchoolService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
