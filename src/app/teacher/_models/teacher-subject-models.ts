@@ -1,6 +1,6 @@
 export class TeacherSubjectModels {
     constructor(  
         public TeacherId:number,
-        public SubjectId:number,
+        public SubjectId:string,
     ){}
 }

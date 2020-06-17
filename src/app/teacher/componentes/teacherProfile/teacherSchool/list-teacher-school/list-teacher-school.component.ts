@@ -12,11 +12,7 @@ export class ListTeacherSchoolComponent implements OnInit {
   constructor(private schoolservice:TeacherSchoolService) { }
   sch:TeacherSchoolsModels= new TeacherSchoolsModels(0,"",1);
  
-  schools:TeacherSchoolsModels []=[];  // initial
-
-  getNewTeacherSchools(teacherSchool:TeacherSchoolsModels){
-    this.schools.push(teacherSchool);
-  }
+  schools:TeacherSchoolsModels []=[];
 
   ngOnInit() {
     

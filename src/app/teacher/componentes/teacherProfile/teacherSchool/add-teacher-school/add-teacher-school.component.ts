@@ -11,12 +11,11 @@ export class AddTeacherSchoolComponent implements OnInit {
 
   // school:TeacherSchoolsModels= new TeacherSchoolsModels(0,2,"");
   teacherSchool:TeacherSchoolsModels=new TeacherSchoolsModels(1,"",1);
-  constructor(private teacherschoolservice:TeacherSchoolService) { }
+  constructor(private teacherschool:TeacherSchoolService) { }
   
   add()
    {
-        this.teacherschoolservice.add(this.teacherSchool).subscribe(a=>{
-          this.teacherschoolservice.addTeacherSchool(a);
+        this.teacherschool.add(this.teacherSchool).subscribe(a=>{
           console.log("Teacher School Added Successfully!!!");
         })
    }
