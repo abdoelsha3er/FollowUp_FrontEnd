@@ -12,7 +12,7 @@
                         <h2 class="title">Registration Teacher</h2>
                         <form method="POST">
                             <div class="input-group">
-                                <input class="input--style-3" type="text" placeholder="First Name" [(ngModel)]="teacher.FirstName" name="firstnamee"
+                                <input class="input--style-3" type="text" placeholder="First Name" [(ngModel)]="teacher.firstName" name="firstName"
                                 #firstnamee="ngModel" required >
                                                                               
                                 <div class="spanValidation"  *ngIf="firstnamee.invalid && (firstnamee.dirty || firstnamee.touched)">                                
@@ -21,14 +21,14 @@
                             </div>
     
                             <div class="input-group">
-                                <input class="input--style-3" type="text" placeholder="Last Name" [(ngModel)]="teacher.LastName" name="lastnamee"  
+                                <input class="input--style-3" type="text" placeholder="Last Name" [(ngModel)]="teacher.lastName" name="lastName"  
                                 #lastnamee="ngModel" required>
                                 <span class="spanValidation"   *ngIf="lastnamee.invalid && (lastnamee.dirty || lastnamee.touched)">                                
                                     Lastname is required</span>  
                             </div>
                         
                             <div class="input-group">
-                                <input class="input--style-3" type="text" placeholder="Username" [(ngModel)]="teacher.UserName"  name="usernameee"
+                                <input class="input--style-3" type="text" placeholder="Username" [(ngModel)]="teacher.userName"  name="userName"
                                 placeholder="Username" #usernameee="ngModel" required
                                 >
                                 <span class="spanValidation" *ngIf="usernameee.invalid && (usernameee.dirty || usernameee.touched)">                                
@@ -53,7 +53,7 @@
                                 
                                 <div class="input-group">
                                     <div class="rs-select2 js-select-simple select--no-search">
-                                        <select class="form-control"  name="citey" [(ngModel)]="teacher.CityId"
+                                        <select class="form-control"  name="cityId" [(ngModel)]="teacher.cityId"
                                         #citey="ngModel" required style="margin-right: 190px;width: 50%;background: transparent; color: #ccc;">
                                             <option  disabled="disabled" selected="selected">Selected City</option>
                                             <option *ngFor="let item of allcitis" [value]="item.cityId" 
@@ -67,7 +67,7 @@
                                 </div>
         
                                 <div class="input-group">
-                                    <input class="input--style-3" [(ngModel)]="teacher.AddressDetails" type="text" placeholder="Street" name="streeet">
+                                    <input class="input--style-3" [(ngModel)]="teacher.addressDetails" type="text" placeholder="Street" name="addressDetails">
                                 </div>
                               </div>    
 
@@ -77,8 +77,8 @@
 
 
                               <div class="input-group form-group">
-                                <input class="input--style-3 form-control" [(ngModel)]="teacher.Email" type="email" placeholder="Email" 
-                                name="emaeil"  #emaeil="ngModel" pattern="^[a-zA-Z0-9]*@[A-Za-z0-z0-9]+.[a-zA-Z]{2,4}$" required>
+                                <input class="input--style-3 form-control" [(ngModel)]="teacher.email" type="email" placeholder="Email" 
+                                name="email"  #emaeil="ngModel" pattern="^[a-zA-Z0-9]*@[A-Za-z0-z0-9]+.[a-zA-Z]{2,4}$" required>
                                 <div class="spanValidation" 
                                     *ngIf="emaeil.invalid && (emaeil.dirty || emaeil.touched)">                                
                                     <span >*</span>
@@ -86,9 +86,9 @@
                               </div>
     
                               <div class="input-group  form-group" ng-controller="myPass">
-                                <input class="input--style-3 form-control" [(ngModel)]="teacher.Password" type="text" 
+                                <input class="input--style-3 form-control" [(ngModel)]="teacher.password" type="text" 
                                   placeholder="Password" value="xxx"
-                                  name="paess"  required>
+                                  name="password"  required>
                               </div>
                               <div class="input-group form-group">
                                 <input class="input--style-3 form-control" 
@@ -102,13 +102,13 @@
                                </div> 
 
                             <div class="input-group">
-                            <input type="date" [(ngModel)]="teacher.DateOfBirth" id="start" name="DateOfBirth"
+                            <input type="date" [(ngModel)]="teacher.dateOfBirth" id="start" name="dateOfBirth"
                             value="2018-07-22"
                             min="2018-01-01" max="2018-12-31" class="input--style-3">            
                              </div>
                             <div class="input-group">
                                 <div class="rs-select2 js-select-simple select--no-search">
-                                    <select  [(ngModel)]="teacher.Gender" name="gender"
+                                    <select  [(ngModel)]="teacher.gender" name="gender"
                                      #gender="ngModel" required style="margin-right: 190px;width: 50%; background: transparent; color: #ccc; ">
                                         <option value="True" >Male</option>
                                         <option value="False" >Female</option>

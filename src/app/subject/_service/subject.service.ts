@@ -11,8 +11,8 @@ export class SubjectService {
 
   constructor(private http:HttpClient) { }
   
-  GetSubjectsByCategoryId(catid:number):Observable<Subject[]>{
-    return this.http.get<Subject[]>(this.url+ "GetSubjectsByCategoryId/"+ catid);
+  GetSubjectsByCategoryId(catid:number):Observable<any>{
+    return this.http.get<any>(this.url+ "GetSubjectsByCategoryId/"+ catid);
   }
   }
   

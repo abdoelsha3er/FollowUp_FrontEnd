@@ -51,7 +51,7 @@ onUploadPhoto(){
   checkPassWithConfirm()
   {
     console.log('.........................')
-    if(this.teacher.Password== this.confiremPassordd)
+    if(this.teacher.password== this.confiremPassordd)
     
        this.checkPass=true;
     else

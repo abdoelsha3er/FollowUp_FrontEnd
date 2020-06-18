@@ -123,9 +123,37 @@
       </div>
       <div class="card">
         <div class="card-header">
-            <button class="btn btn-link data" data-toggle="collapse" data-target="#cardfive">Social Links <span>+</span></button>
+            <button class="btn btn-link data" data-toggle="collapse" data-target="#cardfive">Phones <span>+</span></button>
         </div>
         <div id="cardfive" class="collapse show" data-parent="#accordion">
+            <div class="card-body ">
+              <app-listteacher-phone></app-listteacher-phone>
+            </div>
+            <div class="card-footer">
+              <button class="btn btn-primary" data-toggle="modal" data-target="#mymodalphone">Add Experience</button>
+              <div class="modal" id="mymodalphone">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <p class="modal-title">Add Phone </p>
+                        </div>
+                        <div class="modal-body">
+                          <app-addteacher-phone></app-addteacher-phone>
+                        </div>
+                        <div class="modal-footer">
+                          <p ><span class="close closeaddexperience" data-dismiss="modal">&times;</span></p>
+                        </div>
+                    </div>
+                </div>
+              </div>
+            </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-header">
+            <button class="btn btn-link data" data-toggle="collapse" data-target="#cardsix">Social Links <span>+</span></button>
+        </div>
+        <div id="cardsix" class="collapse show" data-parent="#accordion">
             <div class="card-body ">
               <app-list-teacher-links></app-list-teacher-links>
             </div>

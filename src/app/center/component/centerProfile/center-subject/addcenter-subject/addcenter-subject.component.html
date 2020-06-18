@@ -1,0 +1,17 @@
+<div class="form-row">
+    <div class="col-md-6  form-group ">
+            <label for="subject">Categories</label>
+            <select name="Name" (change)="selectSubject(cat_id)" [(ngModel)]="cat_id" id="subject" class="form-control">
+                <option class="form-control" *ngFor="let item of allCategorySubjects" [value]="item.categorySubjectId" 
+                >{{item.name}}</option>
+            </select>
+    </div>
+    <div class="col-md-6  form-group ">
+        <label for="subject">Subject</label>
+        <select name="Name" id="subject" [(ngModel)]="centerSubject.subjectId" class="form-control">
+            <option class="form-control" *ngFor="let item of allSubjects" [value]="item.subjectId" 
+            >{{item.name}}</option>
+        </select>
+        <button class="btn btn-info addsubject" (click)="add()" >Add</button>
+    </div>
+</div> 

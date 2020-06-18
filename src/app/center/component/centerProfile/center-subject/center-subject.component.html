@@ -1,1 +1,28 @@
-<app-center-nav></app-center-nav>
+<div class="card">
+    <div class="card-header">
+        <button class="btn btn-link data" data-toggle="collapse" data-target="#cardtwo">Subjects <span>+</span></button>
+    </div>
+    <div id="cardtwo" class="collapse show" data-parent="#accordion">
+        <div class="card-body  ">
+          <app-listcenter-subject></aapp-listcenter-subject>
+        </div>
+        <div class="card-footer">
+          <button class="btn btn-primary" data-toggle="modal" data-target="#mymodalsubject">Add Subject</button>
+          <div class="modal" id="mymodalsubject">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <p class="modal-title">Add Subject </p>
+                    </div>
+                    <div class="modal-body">
+                      <app-addcenter-subject ></app-addcenter-subject>
+                    </div>
+                    <div class="modal-footer">
+                      <p ><span class="close closeaddsubject" data-dismiss="modal">&times;</span></p>
+                    </div>
+                </div>
+            </div>
+          </div>
+        </div>
+    </div>
+</div>

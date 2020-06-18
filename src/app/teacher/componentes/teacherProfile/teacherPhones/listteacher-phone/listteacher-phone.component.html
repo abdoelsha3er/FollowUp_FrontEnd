@@ -1,0 +1,13 @@
+<div class="container">
+     <div class="row">
+        <ol class="experience">
+            <li *ngFor="let item of teacherphones ; let i = index">
+                <h5>{{item.teacherPhoneNumber}}<button  (click)="DeleteTeacherPhone(item.teacherPhoneId,i)" class="btn  close" >x</button> </h5>
+            </li>
+            
+        </ol>
+    </div> 
+    
+</div>
+
+

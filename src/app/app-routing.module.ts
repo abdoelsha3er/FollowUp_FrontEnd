@@ -85,7 +85,7 @@ const routes: Routes = [
   {path:'center/add/group',component:CenterAddGroupComponent},
   {path:'center/edit/group',component:CenterEditGroupComponent},
   {path:'center/list/group',component:CenterListGroupComponent},
-  {path:'center/details/group',component:CenterDetailsGroupComponent},
+  {path:'center/details/group/:id',component:CenterDetailsGroupComponent},
   {path:'center/add/report',component:AddReportComponent},
   {path:'center/list/report',component:ListReportComponent},
   {path:'center/edit/report',component:UpdateReportComponent},

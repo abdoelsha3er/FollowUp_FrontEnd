@@ -7,25 +7,26 @@
     <a  routerLink="/center/add/group"><button class="btn btn-info addgroup">Add Group</button></a>
 <table class="table table-bordered text-center">
     <tr class="head">
-        <td> Name </td>
-        <td> Teacher </td>
-        <td> Subject </td>
-        <td> Grade </td>
-        <td> Status </td>
+        <td>name</td>
+        <td>teacher</td>
+        <td>subject</td>
+        <td>grade</td>
+        <!-- <td> Status </td> -->
         <td > Option </td>
     </tr>
-    <tr>
-        <td> Group1 </td>
-        <td> Hager  </td>
-        <td> Arabic </td>
-        <td> Grade1 </td>
-        <td> opening </td>
+    <tr *ngFor="let item of eductionalcentergroups ; let i = index ">
+        <td>{{item.name}}</td>
+        <td>{{item.teacher.firstName}}</td>
+        <td>{{item.subject.name}}</td>
+        <td>{{item.grade.name}}</td>
+        <!-- <td>{{item.status}}</td> -->
         <td>  
-          <a  routerLink="/center/details/group"><button class="btn btn-primary" > Details </button></a>
+          <!-- <a  routerLink="/center/details/group"></a> -->
+          <button (click)="Details(item,i)" class="btn btn-primary" > Details </button>
             &nbsp;&nbsp;&nbsp;&nbsp;
             <a  routerLink="/center/edit/group"><button class="btn btn-warning" > Edit </button></a>
             &nbsp;&nbsp;&nbsp;&nbsp;
-            <button class="btn btn-danger" data-toggle="modal" data-target="#mymodaldelete">Delete</button>
+            <button (click)="DeleteTeachergroup(item.eductionalCenterGroupId,i)" class="btn btn-danger" data-toggle="modal" data-target="#mymodaldelete">Delete</button>
             <div class="modal" id="mymodaldelete">
               <div class="modal-dialog">
                   <div class="modal-content detail">
@@ -48,99 +49,6 @@
             </div>
             &nbsp;&nbsp;&nbsp;&nbsp;
             <a  routerLink="/center/list/report"><button class="btn btn-success" > Report </button></a>
-        </td>
-    </tr>
-    <tr>
-        <td> Group1 </td>
-        <td> Hager  </td>
-        <td> Arabic </td>
-        <td> Grade1 </td>
-        <td> opening </td>
-        <td>  
-            <button class="btn btn-primary" data-toggle="modal" data-target="#mymodaldetails">Details</button>
-            <div class="modal" id="mymodaldetails">
-              <div class="modal-dialog">
-                  <div class="modal-content detail">
-                      <div class="modal-header details">
-                          <h3 class="modal-title text-light"> Details  </h3>
-                      </div>
-                      <div class="modal-body bg-light">
-                        <app-details-group ></app-details-group>
-                      </div>
-                      <div class="modal-footer">
-                        <p ><span class="close closeaddexperience" data-dismiss="modal">&times;</span></p>
-                      </div>
-                  </div>
-              </div>
-            </div>
-            &nbsp;&nbsp;&nbsp;&nbsp;
-            <button class="btn btn-warning" > Edit </button>
-            &nbsp;&nbsp;&nbsp;&nbsp;
-            <button class="btn btn-danger" > Delete </button>
-            &nbsp;&nbsp;&nbsp;&nbsp;
-            <button class="btn btn-success" > Report </button>
-        </td>
-    </tr>
-    <tr>
-        <td> Group1 </td>
-        <td> Hager  </td>
-        <td> Arabic </td>
-        <td> Grade1 </td>
-        <td> opening </td>
-        <td>  
-            <button class="btn btn-primary" data-toggle="modal" data-target="#mymodaldetails">Details</button>
-            <div class="modal" id="mymodaldetails">
-              <div class="modal-dialog">
-                  <div class="modal-content detail">
-                      <div class="modal-header details">
-                          <h3 class="modal-title text-light"> Details  </h3>
-                      </div>
-                      <div class="modal-body bg-light">
-                        <app-details-group ></app-details-group>
-                      </div>
-                      <div class="modal-footer">
-                        <p ><span class="close closeaddexperience" data-dismiss="modal">&times;</span></p>
-                      </div>
-                  </div>
-              </div>
-            </div>
-            &nbsp;&nbsp;&nbsp;&nbsp;
-            <button class="btn btn-warning" > Edit </button>
-            &nbsp;&nbsp;&nbsp;&nbsp;
-            <button class="btn btn-danger" > Delete </button>
-            &nbsp;&nbsp;&nbsp;&nbsp;
-            <button class="btn btn-success" > Report </button>
-        </td>
-    </tr>
-    <tr>
-        <td> Group1 </td>
-        <td> Hager  </td>
-        <td> Arabic </td>
-        <td> Grade1 </td>
-        <td> opening </td>
-        <td>  
-            <button class="btn btn-primary" data-toggle="modal" data-target="#mymodaldetails">Details</button>
-            <div class="modal" id="mymodaldetails">
-              <div class="modal-dialog">
-                  <div class="modal-content detail">
-                      <div class="modal-header details">
-                          <h3 class="modal-title text-light"> Details  </h3>
-                      </div>
-                      <div class="modal-body bg-light">
-                        <app-details-group ></app-details-group>
-                      </div>
-                      <div class="modal-footer">
-                        <p ><span class="close closeaddexperience" data-dismiss="modal">&times;</span></p>
-                      </div>
-                  </div>
-              </div>
-            </div>
-            &nbsp;&nbsp;&nbsp;&nbsp;
-            <button class="btn btn-warning" > Edit </button>
-            &nbsp;&nbsp;&nbsp;&nbsp;
-            <button class="btn btn-danger" > Delete </button>
-            &nbsp;&nbsp;&nbsp;&nbsp;
-            <button class="btn btn-success" > Report </button>
         </td>
     </tr>
 </table>

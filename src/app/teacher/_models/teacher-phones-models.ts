@@ -1,6 +1,7 @@
 export class TeacherPhonesModels {
     constructor(  
-        public TeacherId:number,
-        public PhoneNumber:string,
+        public TeacherPhoneId:number,
+        public TeacherPhoneNumber:string,
+        public TeacherId:number,        
     ){}
 }

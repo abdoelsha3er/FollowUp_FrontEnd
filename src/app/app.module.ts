@@ -80,6 +80,11 @@ import { MatButtonModule} from '@angular/material/button';
 import { MatToolbarModule} from '@angular/material/toolbar';
 import { MatInputModule } from '@angular/material';
 import { TeacherSchoolService } from './teacher/_services/teacher-school.service';
+import { AddteacherPhoneComponent } from './teacher/componentes/teacherProfile/teacherPhones/addteacher-phone/addteacher-phone.component';
+import { ListteacherPhoneComponent } from './teacher/componentes/teacherProfile/teacherPhones/listteacher-phone/listteacher-phone.component';
+import { AddcenterSubjectComponent } from './center/component/centerProfile/center-subject/addcenter-subject/addcenter-subject.component';
+import { ListcenterSubjectComponent } from './center/component/centerProfile/center-subject/listcenter-subject/listcenter-subject.component';
+
 
 
 
@@ -162,6 +167,11 @@ import { TeacherSchoolService } from './teacher/_services/teacher-school.service
     ParentNavComponent,
     ParentUpdateComponent,
     TopComponent,
+    AddteacherPhoneComponent,
+    ListteacherPhoneComponent,
+    AddcenterSubjectComponent,
+    ListcenterSubjectComponent,
+    
 
    
   ],

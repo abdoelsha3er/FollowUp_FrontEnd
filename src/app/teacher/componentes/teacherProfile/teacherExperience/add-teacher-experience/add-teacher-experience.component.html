@@ -3,8 +3,27 @@
     <div class="form-row">
         <div class="col-md-12 form-group">
             <label for="experience">Experience</label>
-            <input type="text" class="form-control" name="experience"  placeholder="Enter Experience ">
+            <input type="text" [(ngModel)]="teacherExprince.Description" class="form-control" name="description"  placeholder="Enter Experience ">
         </div>
-        <button class="btn btn-info addexperience">Add</button>
+        <div class="form-row" >
+            <div class="col-md-12 form-group">
+                <div class="input-group"style="width:47%;">
+                    <input type="date" id="start" name="trip-start" [(ngModel)]="teacherExprince.StartDate"
+                    value="2018-07-22"
+                    min="2018-01-01" max="2018-12-31" class="form-control" >            
+                </div>
+            </div>
+        </div>
+
+        <div class="form-row">
+            <div class="col-md-12 form-group">
+                <div class="input-group"style="width:47%;">
+                    <input type="date" id="start" name="trip-start"  [(ngModel)]="teacherExprince.EndDate"
+                    value="2018-07-22"
+                    min="2018-01-01" max="2018-12-31" class="form-control" >            
+                </div>
+            </div>
+        </div>
+        <button class="btn btn-info addexperience" (click)="add()">Add</button>
     </div>
 </div>

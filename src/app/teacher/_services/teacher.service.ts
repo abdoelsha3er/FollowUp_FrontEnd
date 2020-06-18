@@ -6,9 +6,6 @@ import { HttpClient } from '@angular/common/http';
   providedIn: 'root'
 })
 export class TeacherService {
-
-  teachers : TeacherModels[]=[
-  ]
   private baseurl:string="http://localhost:6853/api/Teacher";
 
   teacher:TeacherModels;                        // form data >> accept fiiles uploaded
@@ -32,8 +29,8 @@ export class TeacherService {
 
 
 
-  getAllTeachers(){
-    return this.teachers;
+  GetTeachers(){
+    return this.http.get<any>(this.baseurl+"/GetTeachers");
   }
   constructor(private http:HttpClient) { }
 }

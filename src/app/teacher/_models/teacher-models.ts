@@ -2,17 +2,17 @@ import { ɵangular_packages_platform_browser_dynamic_platform_browser_dynamic_a 
 
 export class TeacherModels {
     constructor( 
-        public TeacherId:number,
-        public FirstName:string, 
-        public LastName:string, 
-        public UserName :string,
-        public Email:string,   
-        public Password :string,
-        public CityId:number, 
-        public AddressDetails :string,
-        public Gender:string,
-        public DateOfBirth :string,  // covert to date
-        public About :string,
+        public teacherId:number,
+        public firstName:string, 
+        public lastName:string, 
+        public userName :string,
+        public email:string,   
+        public password :string,
+        public cityId:number, 
+        public addressDetails :string,
+        public gender:string,
+        public dateOfBirth :string,  // covert to date
+        public about :string,
     ){}
 
 }

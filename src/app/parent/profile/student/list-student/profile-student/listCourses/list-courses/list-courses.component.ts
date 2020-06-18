@@ -13,7 +13,7 @@ export class ListCoursesComponent implements OnInit {
   constructor(private tchrSrv : TeacherService) { }
 
   ngOnInit() {
-    this.teachers = this.tchrSrv.getAllTeachers();
+    // this.teachers = this.tchrSrv.getAllTeachers();  // you can get all teacher of student from service teacher
   }
 
 }
