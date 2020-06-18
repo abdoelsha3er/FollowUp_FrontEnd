@@ -40,10 +40,9 @@
         
                                   <div class="input-group">
                                     <input class="input--style-3 form-control" [(ngModel)]="mobile" type="text" placeholder="Mobile" 
-                                      maxlength="11" minlength="11" name="mobilee" pattern="[0-9]{10}"  #mobilee="ngModel" required>
+                                       name="mobilee" pattern="[0-9]{11}"  #mobilee="ngModel" required>
                                       <div class="spanValidation"   *ngIf="mobilee.invalid && (mobilee.dirty || mobilee.touched)">                                
-                                        *</div>
-                                        <div class="spanValidation" *ngIf="mobilee.errors.minlength">Mobile must be equal 11</div>
+                                        Mobile must be equal 11</div>
                                   </div>
 
                                   <div class="form-row form-group">
@@ -53,7 +52,7 @@
                                             #governatee="ngModel" required  style="margin-right: 190px;width: 50%;background: transparent; color: #ccc;">
                                                <option disabled="disabled" selected="selected">Selected Government</option>
                                                 <option *ngFor="let item of allgovs" [value]="item.governmentId" 
-                                                 >{{item.governmentName}}</option>                              
+                                                 >{{item.name}}</option>                              
                                             </select>
                                             <div class="select-dropdown"></div>
                                         
@@ -68,7 +67,7 @@
                                             #citey="ngModel" required style="margin-right: 190px;width: 50%;background: transparent; color: #ccc;">
                                                 <option  disabled="disabled" selected="selected">Selected City</option>
                                                 <option *ngFor="let item of allcitis" [value]="item.cityId" 
-                                               >{{item.cityName}}</option>
+                                               >{{item.name}}</option>
                                               
                                             </select>
                                             <div class="select-dropdown"></div>
@@ -91,13 +90,13 @@
                                         </div>
                                   </div>
                                   <div class="input-group  form-group" ng-controller="myPass">
-                                    <input class="input--style-3 form-control" [(ngModel)]="pass" type="text" 
+                                    <input class="input--style-3 form-control" [(ngModel)]="pass" type="password" 
                                       placeholder="Password" value="xxx"
                                       name="paess"  required>
                                   </div>
                                   <div class="input-group form-group">
                                     <input class="input--style-3 form-control" 
-                                    type="text" placeholder="Confirm password" name="confiremPass" [(ngModel)]="confiremPassordd"
+                                    type="password" placeholder="Confirm password" name="confiremPass" [(ngModel)]="confiremPassordd"
                                      #confiremPass="ngModel" my-directive required 
                                      (change)="checkPassWithConfirm()">
          
@@ -106,7 +105,8 @@
                                      </div>
                                    </div> 
                                    <div class="input-group">
-                                        <input class="input--style-3" [(ngModel)]="pic" type="file" placeholder="Picture" name="peic">
+                                        <input class="input--style-3" [(ngModel)]="pic" type="file" placeholder="Picture"
+                                         name="peic" (change)="onUploadPhoto()" #fileInput>
                                     </div>
                                     <div class="p-t-10">
                                          <button class="btn btn--pill btn--green" type="submit" (click)="addParent()">Submit</button>

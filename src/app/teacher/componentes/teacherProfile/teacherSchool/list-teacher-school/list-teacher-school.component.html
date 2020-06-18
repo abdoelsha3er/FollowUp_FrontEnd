@@ -1,6 +1,6 @@
 <div class="container">
     <div class="row">
-        <div class="col-md-4" *ngFor="let item of schools ; let i = index ">
+        <div class="col-md-4" style="width: 60%;" *ngFor="let item of schools ; let i = index ">
           <button (click)="DeleteTeacherSchool(item.teacherSchoolId,i)" class="btn close">X</button>
             <img src="../../../../../assets/img/school1.png " class="schoolimg">
             <h5 class="schoolname" > {{item.schoolName}}  </h5>

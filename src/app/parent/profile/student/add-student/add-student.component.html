@@ -12,19 +12,28 @@
                     </div>
                     <div class="col-md-5" style="padding: 20px;">
                          <h2 class="title">Add Student</h2>
+                        
                          <form method="POST">
 
-                        <div class="input-group">
-                            <input class="input--style-3" type="text" placeholder="Name" name="name">
+                        <div class="input-group form-group">
+                            <input class="input--style-3 form-control" type="text" placeholder="Name" name="studentname"
+                            [(ngModel)]="studentName" #studentname="ngModel">
+
+                            <div class="spanValidation"  *ngIf="studentname.invalid && (studentname.dirty || studentname.touched)">                                
+                                <span > UnValid Name </span>
+                           <!-- <span class="spanValidation" *ngIf="firstnamee.errors.required"></span>                                 -->
+                              </div>
                         </div>
                 
                       
                         <div class="input-group">
-                            <input class="input--style-3" type="text" placeholder="Password" name="pass">
+                            <input class="input--style-3" type="password" placeholder="Password" name="pass" [(ngModel)]="password"
+                            #pass="ngModel" required>
                         </div>
                  
                         <div class="input-group">
-                            <input class="input--style-3" type="text" placeholder="Confirm password" name="confirmPass">
+                            <input class="input--style-3" type="password" placeholder="Confirm password" name="confirmPass"
+                            (change)="checkPassWithConfirm()"  [(ngModel)]="confiremPassordd" #confirmPass="ngModel"  required>
                         </div>
                 
                       
@@ -32,32 +41,53 @@
                         <div class="input-group">
                             <input type="date" id="start" name="trip-start"
                             value="2018-07-22"
-                            min="2018-01-01" max="2018-12-31" class="input--style-3">            
+                            min="2018-01-01" max="2018-12-31" class="input--style-3" [(ngModel)]="DateOfBirth" name="dateofbirth"
+                            #dateofbirth="ngModel" required>  
+                            
+                            <div class="spanValidation"  *ngIf="dateofbirth.invalid && (dateofbirth.dirty || dateofbirth.touched)">                                
+                                <span > UnValid  </span>
+                              </div>
                                     </div>
                 
                            <div class="input-group">
-                             <input class="input--style-3" type="text" placeholder="School" name="school">
+                             <input class="input--style-3" type="text" placeholder="School" name="school" [(ngModel)]="School"
+                             #school="ngModel">
+
+                             <div class="spanValidation"  *ngIf="school.invalid && (school.dirty || school.touched)">                                
+                                <span > UnValid  </span>
+                              </div>
                           </div>            
                 
                             <div class="input-group"  >
-                                <label  class="input--style-3"  style="float: left;">Grade</label>
+                                <label  class="input--style-3"  style="float: left;">Education</label>
                 
-                                <select class="input--style-3"  style="margin-left: 20px; width:25%; float: left;">
+                                <select class="input--style-3"  style="margin-left: 20px; width:25%; float: left;" name="educa"
+                                [(ngModel)]="Education" #educa="ngModel">
                                   <option>1</option>
                                   <option>2</option>
                                   <option>3</option>
                                   <option>4</option>
                                   <option>5</option>
                                 </select>
+
+                                <div class="spanValidation"  *ngIf="educa.invalid && (educa.dirty || educa.touched)">                                
+                                    <span > UnValid  </span>
+                                  </div>
                               </div>
                 
                            
                 
                         <div class="input-group">
-                            <textarea class="input--style-3"  placeholder="Skills" rows="5" style="width: 250px; border: 1px solid white;"></textarea>
+                            <textarea class="input--style-3"  placeholder="Skills" rows="5" style="width: 250px; border: 1px solid white;"
+                            name="skills" #skills="ngModel" [(ngModel)]="Skills">
+                            </textarea>
+
+                            <div class="spanValidation"  *ngIf="skills.invalid && (skills.dirty || skills.touched)">                                
+                                <span > UnValid  </span>
+                              </div>
                           </div>
                 
-                          <div class="input-group"  >
+                          <!-- <div class="input-group"  >
                             <label  class="input--style-3" style="float: left;" >Year</label>
                 
                             <select class="input--style-3" style="margin-left: 20px; width:25%; float: left;">
@@ -67,25 +97,30 @@
                               <option>4</option>
                               <option>5</option>
                             </select>
-                          </div>
+                          </div> -->
                 
                           
                 
                         <div class="input-group">
                            
-                            <input class="input--style-3" type="text" placeholder="Percentage Degree of last year" name="degree" > 
+                            <input class="input--style-3" type="text" placeholder="Percentage Degree of last year" name="degree" 
+                            #degree="ngModel" [(ngModel)]="DegreeOfLastYear"> 
+
+                            <div class="spanValidation"  *ngIf="degree.invalid && (degree.dirty || degree.touched)">                                
+                                <span > UnValid  </span>
+                              </div>
                         </div>
                 
                 
                         <div class="input-group">
-                            <input class="input--style-3" type="file" placeholder="Picture" name="pic">
+                            <input class="input--style-3" type="file" placeholder="Picture" name="pic"#fileInput >
                         </div>
                 
                  
                      
                       
                         <div class="p-t-10">
-                            <button class="btn btn--pill btn--green" type="submit">Submit</button>
+                            <button class="btn btn--pill btn--green" (click)="createStudent()" type="submit">Submit</button>
                         </div>
                      </form>
                     </div>

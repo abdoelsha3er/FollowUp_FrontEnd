@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "myappone"
+    }
+  },
+  "defaultProject": "myappone",
+  "cli": {
+    "analytics": "34777c00-1b22-40f9-bf9b-b20d76a816fd"
+  }
 }

@@ -45,6 +45,8 @@ import { ParentUpdateComponent } from './parent/parent-update/parent-update.comp
 import { TopComponent } from './shared/top/top.component';
 
 
+
+
 const routes: Routes = [
   {path:'',component:HomeComponent},
   {path:'home',component:HomeComponent},
@@ -69,16 +71,16 @@ const routes: Routes = [
 
   ///////////////////////////////
   {path:'Register', component:RegisterComponent},
-  {path:'AddStudent',component:AddStudentComponent},
+  {path:'Student/AddStudent/:parentId',component:AddStudentComponent},
   {path:'parent/update',component:ParentUpdateComponent},
-  {path:'ParentProfile', component:ParentProfileComponent},
-  {path:'StudentProfile', component:StudentProfileComponent},
+  {path:'Parent/ParentProfile/:parentId',component:ParentProfileComponent},
+  {path:'Student/StudentProfile/:ParentId/:StudentId', component:StudentProfileComponent},
   {path:'StudentDetails',component:DetailsComponent},
   {path:'StudentReport', component:ReportComponent},
   {path:'StudentShowReport',component:ShowReportComponent},
   {path:'ParentJoinGroup', component:JoinGroupComponent},
   {path:'studentSchule',component:SubjectSchuleComponent},
-  {path:'StudentUpdate', component:UpdateStudentComponent},
+  {path:'Student/StudentUpdate/:ParentId/:StudentId', component:UpdateStudentComponent},
   ///////////////
   {path:'center/register',component:CenterRegisterComponent},
   {path:'center/profile',component:CenterProfileComponent},
