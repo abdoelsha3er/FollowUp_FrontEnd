@@ -24,9 +24,9 @@
           <!-- <a  routerLink="/center/details/group"></a> -->
           <button (click)="Details(item,i)" class="btn btn-primary" > Details </button>
             &nbsp;&nbsp;&nbsp;&nbsp;
-            <a  routerLink="/center/edit/group"><button class="btn btn-warning" > Edit </button></a>
+            <button (click)="EditGroup(item,i)" class="btn btn-warning" > Edit </button>
             &nbsp;&nbsp;&nbsp;&nbsp;
-            <button (click)="DeleteTeachergroup(item.eductionalCenterGroupId,i)" class="btn btn-danger" data-toggle="modal" data-target="#mymodaldelete">Delete</button>
+            <button (click)="DeleteEductionalCenterGroup(item.eductionalCenterGroupId,i)" class="btn btn-danger" data-toggle="modal" >Delete</button>
             <div class="modal" id="mymodaldelete">
               <div class="modal-dialog">
                   <div class="modal-content detail">

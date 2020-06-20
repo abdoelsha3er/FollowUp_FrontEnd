@@ -10,7 +10,8 @@ import { TeacherModels } from '../_models/teacher-models';
 export class TeacherSchoolService {
   private baseurl:string="http://localhost:6853/api/TeacherSchool"
   school:TeacherSchoolsModels;
-  teacher:TeacherModels=new TeacherModels("","","","","","",1,"","",new Date("01/07/1993").toLocaleDateString(),"");
+  // teacher:TeacherModels=new TeacherModels(0,"","","","","",1,"","",new Date("01/07/1993").toLocaleDateString(),);
+  teacher:TeacherModels=new TeacherModels(0,'','','','','',0,'','',new Date("01/07/1993").toLocaleDateString(),'');
 
   
 teacherSchool:TeacherSchoolsModels;

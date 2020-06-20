@@ -45,8 +45,6 @@ import { ParentUpdateComponent } from './parent/parent-update/parent-update.comp
 import { TopComponent } from './shared/top/top.component';
 
 
-
-
 const routes: Routes = [
   {path:'',component:HomeComponent},
   {path:'home',component:HomeComponent},
@@ -57,7 +55,7 @@ const routes: Routes = [
   {path:'top',component:TopComponent},
   {path:'allteacher',component:AllteacherComponent},
   {path:'teacher/register',component:TeacherRegisterComponent},
-  {path:'teacher/update',component:TeacherUpdateComponent},
+  {path:'teacher/update/:id',component:TeacherUpdateComponent},
   {path:'teacher/profile',component:TeacherProfileComponent},
   {path:'teacher/add/group',component:AddGroupComponent},
   {path:'teacher/edit/group',component:EditGroupComponent},
@@ -85,7 +83,7 @@ const routes: Routes = [
   {path:'center/register',component:CenterRegisterComponent},
   {path:'center/profile',component:CenterProfileComponent},
   {path:'center/add/group',component:CenterAddGroupComponent},
-  {path:'center/edit/group',component:CenterEditGroupComponent},
+  {path:'center/edit/group/:id',component:CenterEditGroupComponent},
   {path:'center/list/group',component:CenterListGroupComponent},
   {path:'center/details/group/:id',component:CenterDetailsGroupComponent},
   {path:'center/add/report',component:AddReportComponent},
@@ -93,8 +91,7 @@ const routes: Routes = [
   {path:'center/edit/report',component:UpdateReportComponent},
   {path:'center/send/report',component:SendReportComponent},
   {path:'center/details/report',component:DetailsReportComponent},
-  {path:'center/update',component:CenterUpdateComponent},
-
+  {path:'center/update/:id',component:CenterUpdateComponent},
 ];
 
 @NgModule({

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ElementRef, ViewChild } from '@angular/core';
 import { EductionalCenterGroup } from 'src/app/center/_models/eductional-center-group';
 import { Router } from '@angular/router';
 import { EductionalCenterGroupService } from 'src/app/center/_services/eductional-center-group.service';
@@ -17,12 +17,14 @@ import { Grade } from 'src/app/grade/_model/grade';
   styleUrls: ['./add-group.component.css']
 })
 export class CenterAddGroupComponent implements OnInit {
+ 
   allCategorySubjects : CategorySubject[] = [];
   allSubjects:Subject[] = [];
   allTeachers:TeacherModels[] = [];
   allGrades:Grade[] = [];
   cat_id:number;
   arr:any[]=[];
+  @ViewChild("fileInput",{static:false}) fileInput:ElementRef
   // static arrayname: any[] = [{Status:0, name:"Open"},{Status:1, name:"Closed"},{Status:2, name:"Archived"}];
 
   eductionalCenterGroup:EductionalCenterGroup=new EductionalCenterGroup(1,"Group2Frensh",1,1,1,1,"desc","",20,
@@ -37,8 +39,15 @@ export class CenterAddGroupComponent implements OnInit {
     private gradeservice : GradeService
   ) { }
 
+// File choose
+onUploadPhoto(){
+  
+  console.log(this.fileInput);
+}
+
   ngOnInit() {
     this.categorysubjectservice.GetAllCategories().subscribe(a=>{
+      console.log(a);
       this.allCategorySubjects=a;
     });
     // get all teachers
@@ -58,9 +67,12 @@ export class CenterAddGroupComponent implements OnInit {
 
   // add new Group
   add(){
+    var nativeElement :HTMLInputElement = this.fileInput.nativeElement;  // catch input
+    var file=nativeElement.files[0];
+    nativeElement.value="";
     console.log(this.eductionalCenterGroup);
-    this.eductionalcentergroupservice.add(this.eductionalCenterGroup).subscribe(a=>{
-      console.log("New     Group dta in component ");
+    this.eductionalcentergroupservice.add(this.eductionalCenterGroup,file).subscribe(a=>{
+      console.log("New Group dta in component ");
       console.log(a);
       this.r.navigateByUrl("/center/list/group");
     })

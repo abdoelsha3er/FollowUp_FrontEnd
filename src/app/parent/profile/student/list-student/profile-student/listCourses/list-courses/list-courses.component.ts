@@ -15,17 +15,15 @@ export class ListCoursesComponent implements OnInit {
   constructor(private tchrSrv : TeacherService,private r:Router,private ar:ActivatedRoute) { }
 
   ngOnInit() {
-<<<<<<< HEAD
+
     // this.teachers = this.tchrSrv.getAllTeachers();  // you can get all teacher of student from service teacher
-=======
-    this.teachers = this.tchrSrv.getAllTeachers();
+    // this.teachers = this.tchrSrv.GetTeachers();
     this.parentId =this.ar.snapshot.params['ParentId'];
     this.studentId =this.ar.snapshot.params['StudentId'];
   }
   updateprofile()
   {
     this.r.navigateByUrl("/Student/StudentUpdate/"+this.parentId+"/"+this.studentId ); 
->>>>>>> b980906718d39b96ac3955409687282a9ff08ea9
   }
 
 }

@@ -1,14 +1,13 @@
 export class CenterModels {
      constructor(
-        public FirstName:string,
-        public LastName:string,
-        public UserName:string,
-        public Password:string,
-        public Email:string,
-        public Phone:string,
-        public Picture:string,
-        public CityId:number,
-        public AddressDetails:string,
-   
+        public EductionalCenterId:number,
+        public name:string,
+        public userName:string,
+        public email:string,
+        public password:string,
+        public picture:string,
+        public about:string,
+        public cityId:number,
+        public addressDetails:string,
        ){};
 }

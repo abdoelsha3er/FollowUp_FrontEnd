@@ -32,10 +32,17 @@ export class CenterListGroupComponent implements OnInit {
       this.eductionalcentergroups.splice(indexs,1); // remove it from array products , but it deleted in api from services
     })
   }
-
-  Details(items,i){
-
+  EditGroup(items,indexs){
+    console.log("iteeeeeeeeeeems : ")
+    console.log(items);
+    this.r.navigateByUrl("/center/edit/group/"+items.eductionalCenterGroupId);
   }
-
-
+  Details(items,i){
+    this.r.navigateByUrl("center/details/group/"+items.eductionalCenterGroupId);
+  }
+  DeleteEductionalCenterGroup(eductionalCenterGroupId,indexs){
+    this.eductionalcentergroupservice.delete(eductionalCenterGroupId).subscribe(a=>{
+      this.eductionalcentergroups.splice(indexs,1)
+    })
+  }
 }

@@ -8,37 +8,32 @@
             <div class="form-row">
 
                 <div class="col-md-6 form-group">
-                        <label for="name">First Name</label>
-                        <input type="text" class="form-control" name="name"  placeholder="Enter Name">
-                </div>
+                    <label for="name">name</label>
+                    <input type="text" class="form-control" name="name" [(ngModel)]="center.name" placeholder="Name">
+            </div>
                 <div class="col-md-6 form-group">
-                    <label for="name">Last Name</label>
-                    <input type="text" class="form-control" name="name"  placeholder="Enter Name">
+                    <label for="userName">UserName</label>
+                    <input type="text" class="form-control" name="userName" [(ngModel)]="center.userName" placeholder="User Name">
             </div>
             </div>
-        <!--    <div class="form-row">
-                <div class="col-md-12 form-group">
-                        <label for="email">Email</label>
-                        <input type="email"  class="form-control" name="email"  placeholder="Enter Email">
-                </div>
-            </div> -->
+
             <div class="form-row">
-                <div class="col-md-12 form-group">
+                <div class="col-md-6 form-group">
                         <label for="password">Password</label>
                         <input type="password"  class="form-control" name="password"  placeholder="Enter Password">
                 </div>
             </div>
             <div class="form-row">
-                <div class="col-md-12 form-group">
+                <div class="col-md-6 form-group">
                         <label for="confirmpassword">Confirm Password</label>
                         <input type="password"  class="form-control" name="confirmpassword"  placeholder="Confirm Password">
                 </div>
             </div>
            
             <div class="form-row">
-                <div class="col-md-12 form-group">
-                        <label for="phonenumber">Phone Number</label>
-                        <input type="number" class="form-control" name="phone" placeholder="Enter Phone Number">
+                <div class="col-md-6 form-group">
+                        <label for="phonenumber">Choose Picture</label>
+                        <input type="file" (change)="onUploadPhoto()" #fileInput type="file" class="form-control" name="file">
                 </div>
                 <div class="col-md-12 form-group">
                     <label for="barthofdate"> Address</label>
@@ -49,8 +44,13 @@
                                    <span>Government</span>
                                </div>
                                <div class="col-md-9">
-                                   <select name="day" id="day" class="form-control">
-                                       <option value="1" class="form-control">Mansoura</option>
+                                   <select (change)="selectCity(governate)" [(ngModel)]="governate" name="name" class="form-control">
+                                    <option disabled="disabled" selected="selected">
+                                        Selected Government
+                                    </option>   
+                                    <option *ngFor="let item of allgovs" [value]="item.governmentId">
+                                        {{item.name}}
+                                    </option>
                                    </select>
                                </div>
                            </div>
@@ -62,8 +62,13 @@
                                     <span>City</span>
                                 </div>
                                 <div class="col-md-10">
-                                    <select name="month" id="month" class="form-control">
-                                       <option value="1" class="form-control">Talgha</option>
+                                    <select name="citey" [(ngModel)]="center.cityId" class="form-control">
+                                        <option  disabled="disabled" selected="selected">
+                                            Selected City
+                                        </option>
+                                        <option *ngFor="let item of allcitis" [value]="item.cityId" >
+                                            {{item.name}}
+                                        </option>
                                     </select>
                                 </div>
                             </div>
@@ -73,10 +78,21 @@
                         <div class="col-md-12" style="margin-top:15px;">
                             <div class="row">
                                 <div class="col-md-1">
-                                    <span>Street</span>
+                                    <span>Address Details</span>
                                 </div>
                                 <div class="col-md-10" style="margin-left: 26px; width:86%">
-                                    <input type="text" class="form-control" name="street">
+                                    <input [(ngModel)]="center.addressDetails" type="text" class="form-control" name="addressDetails">
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-12" style="margin-top:15px;">
+                            <div class="row">
+                                <div class="col-md-1">
+                                    <span>About</span>
+                                </div>
+                                <div class="col-md-10" style="margin-left: 26px; width:86%">
+                                    <input [(ngModel)]="center.about" type="text" class="form-control" name="about">
 
                                 </div>
                             </div>
@@ -84,16 +100,6 @@
 
                     </div>
             </div>
-            </div>
-            <div class="form-row">
-                <div class="col-md-12 form-group">
-                    <label for="barthofdate"> Bath Of Date</label>
-                    <div class="input-group"style="width:47%;">
-                        <input type="date" id="start" name="trip-start"
-                        value="2018-07-22"
-                        min="2018-01-01" max="2018-12-31" class="form-control" >            
-                    </div>
-                </div>
             </div>
          <!--  <div class="form-row">
                 <div class="col-md-6  form-group ">
@@ -105,7 +111,7 @@
                 </div>
             </div> --> 
             <div class="form-row">
-                    <button class="btn btn-info col-md-offset-9 save"  style="border-radius: 30px;">Save</button>
+                    <button  (click)="onSaveChaneges()" class="btn btn-info col-md-offset-9 save"  style="border-radius: 30px;">Save</button>
             </div> 
            
         </form> 

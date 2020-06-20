@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 import { Government } from 'src/app/government/_model/government';
 import { City } from 'src/app/city/_model/city';
 import { CenterModels } from '../../_models/center-models';
@@ -15,30 +15,41 @@ import { CityService } from 'src/app/city/_service/city.service';
 export class CenterRegisterComponent implements OnInit {
   allgovs :Government[] = [];
   allcitis:City[] = [];
-  center:CenterModels=new CenterModels("","","","","","","",1,"");
+  center:CenterModels=new CenterModels(0,'Center 1 Cairo','centername1','centermail@gmail.com','123','','about center1',2,'mahalla');
   confiremPassordd:string;
   checkPass:boolean=true;
   governate:number;
+  @ViewChild("fileInput",{static:false}) fileInput:ElementRef
 
-  
   constructor(private r:Router,
     private CenterservicesService:CenterservicesService,
     private govSrv:GovernmentService, 
     private citSrv:CityService ) { }
 
   ngOnInit() {
-    this.govSrv.getAllGovermnts().subscribe(a=>this.allgovs=a)
-    this.citSrv.getAllCities().subscribe(c => this.allcitis = c)
+    this.govSrv.getAllGovermnts().subscribe(a=>{
+      console.log(a);
+      this.allgovs=a;
+    })
   }
 
   selectCity(governmentIId:number){
-    this.citSrv.getcitiesByid(governmentIId).subscribe(a=> this.allcitis = a);
+    this.citSrv.getcitiesByid(governmentIId).subscribe(a=>{
+      console.log("Cities");
+      console.log(a);
+      this.allcitis = a;
+    });
+  }
+
+  // File choose
+  onUploadPhoto(){
+    console.log(this.fileInput);
   }
 
   checkPassWithConfirm()
   {
     console.log('.........................')
-    if(this.center.Password== this.confiremPassordd)
+    if(this.center.password== this.confiremPassordd)
     
        this.checkPass=true;
     else
@@ -46,9 +57,16 @@ export class CenterRegisterComponent implements OnInit {
     this.checkPass=false
     console.log('.................6666666666666........')
     }
+    
   }
+  
   onSave(){
-    this.CenterservicesService.register(this.center).subscribe(a=>{
+    var nativeElement :HTMLInputElement = this.fileInput.nativeElement;  // catch input
+    var file=nativeElement.files[0];
+    nativeElement.value="";
+    this.CenterservicesService.register(this.center,file).subscribe(a=>{
+      console.log("aaaaaaaaa of center");
+      console.log(a);
       this.r.navigateByUrl("/center/profile");
     })
   }

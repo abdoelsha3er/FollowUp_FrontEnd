@@ -21,7 +21,7 @@
             <div class="form-row">
                 <div class="col-md-12 form-group ">
                     <label for="logo">Logo</label>
-                    <input type="file" class="form-control" name="logo" placeholder="Enter Logo" accept="image/*" >            
+                    <input type="file" class="form-control" (change)="onUploadPhoto()" #fileInput name="file" placeholder="Enter Logo" accept="image/*" >            
                 </div>
             </div>
 
