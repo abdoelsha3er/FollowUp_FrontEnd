@@ -69,16 +69,16 @@ const routes: Routes = [
 
   ///////////////////////////////
   {path:'Register', component:RegisterComponent},
-  {path:'Student/AddStudent/:parentId',component:AddStudentComponent},
+  {path:'AddStudent',component:AddStudentComponent},
   {path:'parent/update',component:ParentUpdateComponent},
-  {path:'Parent/ParentProfile/:parentId',component:ParentProfileComponent},
-  {path:'Student/StudentProfile/:ParentId/:StudentId', component:StudentProfileComponent},
+  {path:'ParentProfile', component:ParentProfileComponent},
+  {path:'StudentProfile', component:StudentProfileComponent},
   {path:'StudentDetails',component:DetailsComponent},
   {path:'StudentReport', component:ReportComponent},
   {path:'StudentShowReport',component:ShowReportComponent},
   {path:'ParentJoinGroup', component:JoinGroupComponent},
   {path:'studentSchule',component:SubjectSchuleComponent},
-  {path:'Student/StudentUpdate/:ParentId/:StudentId', component:UpdateStudentComponent},
+  {path:'StudentUpdate', component:UpdateStudentComponent},
   ///////////////
   {path:'center/register',component:CenterRegisterComponent},
   {path:'center/profile',component:CenterProfileComponent},

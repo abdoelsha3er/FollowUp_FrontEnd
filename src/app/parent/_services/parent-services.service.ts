@@ -18,32 +18,12 @@ export class ParentServicesService {
 
    }
 
-
-  CreateParent(parent, photo):Observable<any>{
+  CreateParent(parent:ParentModels):Observable<ParentModels>{
     // const formData: FormData = new FormData();
     // formData.append('avatar', file, file.name);
     // this._parentFile=new ParentModels(parent);
-    const form : FormData = new FormData();
-    form.append("FirstName",parent.FirstName);
-    form.append("LastName",parent.LastName);
-    form.append("UserName",parent.UserName);
-    form.append("Password",parent.Password);
-    form.append("Email",parent.Email);
-    form.append("Phone", parent.Phone)
-    // form.append("Picture",teacher.Picture);
-    form.append("CityId",parent.CityId);
-    form.append("Street",parent.Street);
-    form.append("file",photo);
-    return this.http.post<any>(this.url + 'AddParent', form)
+    return this.http.post<ParentModels>(this.url + 'AddParent', {headers: this.headers})
   }
-
-  DetailsParent(parentId)
-  {
-    return this.http.get<any>("http://localhost:6853/api/Parent/Details/" + parentId)
-  }
-
 
 
 }
-
-

@@ -13,6 +13,7 @@ export class TeacherService {
     console.log("teacher is ******** in service");
     console.log(teacher);
     const form : FormData = new FormData();
+<<<<<<< HEAD
     form.append("FirstName",teacher.firstName);
     form.append("LastName",teacher.lastName);
     form.append("UserName",teacher.userName);
@@ -23,6 +24,18 @@ export class TeacherService {
     form.append("Gender",teacher.gender);
     form.append("DateOfBirth",teacher.dateOfBirth);
     form.append("About",teacher.about);
+=======
+    form.append("FirstName",teacher.FirstName);
+    form.append("LastName",teacher.LastName);
+    form.append("UserName",teacher.UserName);
+    form.append("Email",teacher.Email);
+    form.append("Password",teacher.Password);
+    form.append("CityId",teacher.CityId);
+    form.append("AddressDetails",teacher.AddressDetails);
+    form.append("Gender",teacher.Gender);
+    form.append("DateOfBirth",teacher.DateOfBirth);
+    form.append("About",teacher.About);
+>>>>>>> b7ac86eb9db56355ba1ed6a639d0652cc9ac1421
     form.append("file",photo);
     return this.http.post<any>(this.baseurl+"/TeacherRegister",form)     // type Product
   }

@@ -27,10 +27,15 @@ export class CenterRegisterComponent implements OnInit {
     private citSrv:CityService ) { }
 
   ngOnInit() {
+<<<<<<< HEAD
     this.govSrv.getAllGovermnts().subscribe(a=>{
       console.log(a);
       this.allgovs=a;
     })
+=======
+    this.govSrv.getAllGovermnts().subscribe(a=>this.allgovs=a)
+    // this.citSrv.getAllCities().subscribe(c => this.allcitis = c)
+>>>>>>> b7ac86eb9db56355ba1ed6a639d0652cc9ac1421
   }
 
   selectCity(governmentIId:number){

@@ -6,7 +6,7 @@ export class ParentModels {
      public Password:string,
      public Email:string,
      public Phone:string,
-    //  public Picture:string,
+     public Picture:string,
      public CityId:number,
      public Street:string,
 
